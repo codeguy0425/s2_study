@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中二中史時間線：五代十國（907年－979年）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Noto Serif TC"', 'serif'],
+                    },
+                    colors: {
+                        paper: '#FAF8F5',
+                        ink: '#2C2A29',
+                        vermilion: '#C83E37',
+                        jade: '#2E6B5E',
+                        gold: '#B8860B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center space-x-2.5">
+                <span class="bg-vermilion text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wider">中二中史時間線</span>
+                <h1 class="font-serif text-lg sm:text-xl font-bold text-stone-800">五代十國興亡演變（907年－979年）</h1>
+            </div>
+            <!-- Filter Pills -->
+            <div class="flex flex-wrap gap-1.5 text-xs sm:text-sm" id="filter-bar">
+                <button onclick="filterEvents('all')" class="filter-btn px-3 py-1.5 rounded-lg bg-stone-800 text-white font-bold transition cursor-pointer" data-filter="all">全部事件</button>
+                <button onclick="filterEvents('dynasty')" class="filter-btn px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium transition cursor-pointer" data-filter="dynasty">五代更替</button>
+                <button onclick="filterEvents('foreign')" class="filter-btn px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium transition cursor-pointer" data-filter="foreign">外患與割地</button>
+                <button onclick="filterEvents('south')" class="filter-btn px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium transition cursor-pointer" data-filter="south">十國與統一</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto w-full px-4 sm:px-6 py-8 flex-grow">
+
+        <!-- Visual Dynasty Duration Bar (907 - 979) -->
+        <section class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-stone-200 mb-8">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <h2 class="font-serif text-lg sm:text-xl font-bold text-stone-900">📊 五代更替時間軸比例尺（907年－960年，共53年）</h2>
+                <span class="text-xs text-stone-500">南方「十國」則自902年延續至979年北漢滅亡</span>
+            </div>
+            
+            <!-- Proportional Timeline Bar -->
+            <div class="w-full h-11 rounded-xl overflow-hidden flex text-white text-xs sm:text-sm font-bold shadow-inner">
+                <div style="width: 30.2%" class="bg-rose-700 flex flex-col items-center justify-center border-r border-white/20 px-1" title="後梁：907-923 (16年)">
+                    <span>後梁</span>
+                    <span class="text-[10px] font-normal opacity-90">16年</span>
+                </div>
+                <div style="width: 24.5%" class="bg-amber-700 flex flex-col items-center justify-center border-r border-white/20 px-1" title="後唐：923-936 (13年)">
+                    <span>後唐</span>
+                    <span class="text-[10px] font-normal opacity-90">13年</span>
+                </div>
+                <div style="width: 20.8%" class="bg-stone-700 flex flex-col items-center justify-center border-r border-white/20 px-1" title="後晉：936-947 (11年)">
+                    <span>後晉</span>
+                    <span class="text-[10px] font-normal opacity-90">11年</span>
+                </div>
+                <div style="width: 7.5%" class="bg-red-900 flex flex-col items-center justify-center border-r border-white/20 px-1" title="後漢：947-950 (4年)">
+                    <span>漢</span>
+                    <span class="text-[10px] font-normal opacity-90">4年</span>
+                </div>
+                <div style="width: 17.0%" class="bg-emerald-700 flex flex-col items-center justify-center px-1" title="後周：951-960 (9年)">
+                    <span>後周</span>
+                    <span class="text-[10px] font-normal opacity-90">9年</span>
+                </div>
+            </div>
+            <div class="flex justify-between text-[11px] text-stone-500 mt-1.5 font-mono">
+                <span>907年 朱溫篡唐</span>
+                <span>923年</span>
+                <span>936年 割燕雲</span>
+                <span>947年</span>
+                <span>951年</span>
+                <span>960年 陳橋兵變</span>
+            </div>
+        </section>
+
+        <!-- Vertical Interactive Timeline -->
+        <div class="relative pl-6 sm:pl-8 border-l-2 border-vermilion/40 space-y-6" id="timeline-container">
+            <!-- Events injected via JS -->
+        </div>
+
+    </main>
+
+    <footer class="bg-stone-100 border-t border-stone-200 py-5 text-center text-xs text-stone-500">
+        香港初中中國歷史科 • 五代十國互動時間線
+    </footer>
+
+    <script>
+        const timelineEvents = [
+            {
+                year: "公元 902年－907年",
+                title: "十國割據政權陸續出現",
+                category: "south",
+                badge: "十國開端",
+                badgeColor: "bg-jade text-white",
+                summary: "唐末天下大亂，楊行密建吳、錢鏐建吳越、王建建前蜀，南方割據政權先後成形；各國多採「保境安民」政策，社會相對安定。",
+                examTip: "考點：十國並非同時出現，而是自902年起在五代之外先後並存的十個政權。"
+            },
+            {
+                year: "公元 907年",
+                title: "朱溫篡唐，建立「後梁」（五代開始）",
+                category: "dynasty",
+                badge: "第一代 • 後梁",
+                badgeColor: "bg-vermilion text-white",
+                summary: "宣武節度使朱溫逼迫唐哀帝禪位，定都開封，國號「梁」（史稱後梁），唐朝正式滅亡，五代十國時期揭開序幕。",
+                examTip: "考點：朱溫原為黃巢降將，其篡唐標誌著唐末藩鎮割據演變為正式分裂。"
+            },
+            {
+                year: "公元 923年",
+                title: "李存勗滅後梁，建立「後唐」",
+                category: "dynasty",
+                badge: "第二代 • 後唐",
+                badgeColor: "bg-amber-700 text-white",
+                summary: "沙陀族晉王李存勗攻滅後梁，定都洛陽，自命唐朝繼承者而國號仍稱「唐」（史稱後唐），初期疆域為五代中最大。",
+                examTip: "考點：後唐、後晉、後漢均由沙陀族人建立。"
+            },
+            {
+                year: "公元 936年",
+                title: "石敬瑭勾結契丹建「後晉」，割讓燕雲十六州",
+                category: "foreign",
+                badge: "第三代 • 喪權割地",
+                badgeColor: "bg-rose-800 text-white",
+                summary: "後唐大將石敬瑭為求契丹出兵助其篡位，向契丹主耶律德光稱「兒皇帝」，並割讓戰略要地燕雲十六州。",
+                examTip: "必考重點：失去燕雲十六州使中原喪失長城天險屏障，成為日後北宋長期受遼、金威脅的根源。"
+            },
+            {
+                year: "公元 947年",
+                title: "契丹滅後晉；劉知遠建立「後漢」",
+                category: "dynasty",
+                badge: "第四代 • 後漢",
+                badgeColor: "bg-red-900 text-white",
+                summary: "後晉出帝拒絕向契丹稱臣，契丹南下滅後晉；隨後因中原百姓反抗被迫北撤，河東節度使劉知遠趁機在太原稱帝建後漢（僅存4年，五代最短命）。",
+                examTip: "考點：後漢國祚僅4年（947-950），是五代中存在時間最短的王朝。"
+            },
+            {
+                year: "公元 951年",
+                title: "郭威代漢建「後周」；劉崇建「北漢」",
+                category: "dynasty",
+                badge: "第五代 • 後周",
+                badgeColor: "bg-emerald-700 text-white",
+                summary: "大將郭威推翻後漢，建立後周；後漢宗室劉崇則在太原建立「北漢」，依附契丹與後周對抗。",
+                examTip: "陷阱題：北漢是「十國」中唯一位於北方（今山西一帶）的政權。"
+            },
+            {
+                year: "公元 954年－959年",
+                title: "後周世宗（柴榮）推行改革，國力大增",
+                category: "dynasty",
+                badge: "統一前奏",
+                badgeColor: "bg-emerald-800 text-white",
+                summary: "周世宗勵精圖治，整頓吏治、均定田賦、整編禁軍，並擊敗南唐及契丹收回三關，使後周成為五代最強盛政權，為統一鋪路。",
+                examTip: "考點：周世宗的改革直接為大將趙匡胤日後建立北宋與統一全國奠定堅實基礎。"
+            },
+            {
+                year: "公元 960年",
+                title: "趙匡胤發動陳橋兵變建北宋（五代結束）",
+                category: "dynasty",
+                badge: "五代結束",
+                badgeColor: "bg-stone-800 text-white",
+                summary: "周世宗病逝後幼帝繼位，殿前都點檢趙匡胤在陳橋驛「黃袍加身」，逼後周恭帝禪位，建立北宋，北方五代正式結束。",
+                examTip: "注意年份區分：960年結束的是「五代」，但「十國」仍未完全統一。"
+            },
+            {
+                year: "公元 979年",
+                title: "宋太宗攻滅北漢，五代十國時期完全結束",
+                category: "south",
+                badge: "十國結束 • 全國統一",
+                badgeColor: "bg-jade text-white",
+                summary: "北宋按「先南後北」方針陸續平定南方諸國後，宋太宗於979年親征攻滅最後一個割據政權「北漢」，五代十國大分裂正式落幕。",
+                examTip: "必考年份：979年北漢滅亡才標誌著整個「五代十國時期」的徹底結束。"
+            }
+        ];
+
+        let currentFilter = 'all';
+
+        function renderTimeline() {
+            const container = document.getElementById('timeline-container');
+            const filtered = currentFilter === 'all' 
+                ? timelineEvents 
+                : timelineEvents.filter(e => e.category === currentFilter);
+
+            container.innerHTML = filtered.map(ev => `
+                <div class="relative bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-stone-200 hover:border-vermilion/40 transition">
+                    <!-- Timeline Dot -->
+                    <span class="absolute -left-[33px] sm:-left-[41px] top-6 w-4 h-4 rounded-full bg-vermilion border-4 border-paper shadow"></span>
+                    
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                        <span class="font-mono font-bold text-vermilion text-sm sm:text-base">${ev.year}</span>
+                        <span class="text-xs font-bold px-2.5 py-1 rounded-full ${ev.badgeColor}">${ev.badge}</span>
+                    </div>
+                    <h3 class="font-serif text-lg sm:text-xl font-bold text-stone-900 mb-2">${ev.title}</h3>
+                    <p class="text-sm sm:text-base text-stone-700 leading-relaxed mb-3">${ev.summary}</p>
+                    <div class="bg-amber-50/90 border border-amber-200/80 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-amber-950">
+                        💡 <strong>${ev.examTip}</strong>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterEvents(cat) {
+            currentFilter = cat;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.filter === cat) {
+                    btn.className = "filter-btn px-3 py-1.5 rounded-lg bg-stone-800 text-white font-bold transition cursor-pointer";
+                } else {
+                    btn.className = "filter-btn px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium transition cursor-pointer";
+                }
+            });
+            renderTimeline();
+        }
+
+        renderTimeline();
+    </script>
+</body>
+</html>
