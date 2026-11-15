@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中二中史精讀：五代十國</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Sans TC & Noto Serif TC for traditional aesthetic & readability -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Noto Serif TC"', 'serif'],
+                    },
+                    colors: {
+                        paper: '#FAF8F5',
+                        ink: '#2C2A29',
+                        vermilion: '#C83E37',
+                        jade: '#2E6B5E',
+                        gold: '#B8860B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-vermilion selection:text-white">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="bg-vermilion text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wider">中二中史</span>
+                <h1 class="font-serif text-lg sm:text-xl font-bold text-stone-800">五代十國（907年－979年）精讀</h1>
+            </div>
+            <nav class="flex space-x-1 sm:space-x-2 text-xs sm:text-sm font-medium overflow-x-auto py-1">
+                <a href="#overview" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">背景概覽</a>
+                <a href="#five-dynasties" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">五代更替</a>
+                <a href="#ten-kingdoms" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">十國割據</a>
+                <a href="#features" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">時代特徵</a>
+                <a href="#quiz" class="px-3 py-1.5 rounded-lg bg-vermilion/10 text-vermilion hover:bg-vermilion hover:text-white transition font-bold">小測驗</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white py-10 sm:py-14 px-4 sm:px-6 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="inline-block border border-amber-400/50 text-amber-300 text-xs sm:text-sm px-3 py-1 rounded-full mb-3">
+                香港初中中國歷史科 • 隋唐至宋元過渡時期
+            </div>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight mb-4 leading-tight">
+                藩鎮割據的延續：<span class="text-amber-400">五代十國</span>
+            </h2>
+            <p class="text-stone-300 text-sm sm:text-base max-w-2xl leading-relaxed mb-6">
+                公元907年朱溫篡唐，開啟了長達七十餘年的大分裂時代。北方「五代」如走馬燈般頻繁更替，南方「十國」則相對安定並促進了經濟南移。本精讀助你掌握核心考點、政權演變及時代影響！
+            </p>
+            <!-- Key Stats Pills -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl">
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-stone-400">起訖年份</div>
+                    <div class="font-bold text-base sm:text-lg text-amber-300">907年 - 979年</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-stone-400">北方政權</div>
+                    <div class="font-bold text-base sm:text-lg text-white">梁、唐、晉、漢、周</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-stone-400">核心本質</div>
+                    <div class="font-bold text-base sm:text-lg text-white">唐末藩鎮割據延續</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-stone-400">外患危機</div>
+                    <div class="font-bold text-base sm:text-lg text-rose-400">割讓燕雲十六州</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12">
+
+        <!-- Section 1: 歷史背景與概念釐清 -->
+        <section id="overview" class="scroll-mt-20">
+            <div class="flex items-center space-x-3 mb-5">
+                <span class="w-8 h-8 rounded-lg bg-vermilion text-white flex items-center justify-center font-serif font-bold">一</span>
+                <h3 class="font-serif text-2xl font-bold text-stone-800">歷史背景與基本概念</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1: 由來 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200">
+                    <h4 class="font-bold text-lg text-vermilion mb-3 flex items-center">
+                        <span class="mr-2">📜</span> 1. 五代十國的由來
+                    </h4>
+                    <ul class="space-y-2.5 text-sm sm:text-base text-stone-700 leading-relaxed">
+                        <li class="flex items-start">
+                            <span class="text-vermilion font-bold mr-2">•</span>
+                            <span><strong>唐末藩鎮割據：</strong>安史之亂後，地方節度使擁兵自重，不聽中央號令。黃巢之亂更徹底摧毀唐室威信。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-vermilion font-bold mr-2">•</span>
+                            <span><strong>朱溫篡唐（907年）：</strong>宣武節度使朱溫（原為黃巢降將）廢唐哀帝，自立為帝，國號<strong>「梁」</strong>（史稱後梁），唐朝正式滅亡。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-vermilion font-bold mr-2">•</span>
+                            <span><strong>分裂格局形成：</strong>各地強大節度使紛紛效法自立，形成北方「五代」、南方（及山西）「十國」的局面。</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: 名詞解釋 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200">
+                    <h4 class="font-bold text-lg text-jade mb-3 flex items-center">
+                        <span class="mr-2">🧭</span> 2. 「五代」與「十國」的區別
+                    </h4>
+                    <div class="space-y-4 text-sm sm:text-base text-stone-700">
+                        <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-200/80">
+                            <div class="font-bold text-stone-900 mb-1">什麼是「五代」？（時間先後）</div>
+                            <p class="leading-relaxed">指<strong>中原地區（黃河流域）</strong>先後更替的五個短命正統王朝：<strong>後梁、後唐、後晉、後漢、後周</strong>（907年－960年），僅歷時53年。</p>
+                        </div>
+                        <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-200/80">
+                            <div class="font-bold text-stone-900 mb-1">什麼是「十國」？（空間並存）</div>
+                            <p class="leading-relaxed">指五代之外，主要在<strong>南方</strong>（共九國）及<strong>北方山西</strong>（北漢，共一國）先後並存的十個割據政權（902年－979年）。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 北方五代更替（互動時間線 + 詳表） -->
+        <section id="five-dynasties" class="scroll-mt-20">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-lg bg-vermilion text-white flex items-center justify-center font-serif font-bold">二</span>
+                    <h3 class="font-serif text-2xl font-bold text-stone-800">北方「五代」興亡速覽</h3>
+                </div>
+                <span class="text-xs font-medium bg-amber-100 text-amber-800 px-3 py-1 rounded-full">
+                    記憶口訣：「梁唐晉漢周，前面都有後」
+                </span>
+            </div>
+
+            <!-- Interactive Tabs for Five Dynasties -->
+            <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+                <!-- Dynasty Selector Buttons -->
+                <div class="grid grid-cols-5 border-b border-stone-200 bg-stone-50 text-center" id="dynasty-tabs">
+                    <button onclick="selectDynasty(0)" class="dynasty-tab active py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-vermilion text-vermilion bg-white transition">
+                        1. 後梁
+                    </button>
+                    <button onclick="selectDynasty(1)" class="dynasty-tab py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-transparent text-stone-600 hover:text-stone-900 transition">
+                        2. 後唐
+                    </button>
+                    <button onclick="selectDynasty(2)" class="dynasty-tab py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-transparent text-stone-600 hover:text-stone-900 transition">
+                        3. 後晉
+                    </button>
+                    <button onclick="selectDynasty(3)" class="dynasty-tab py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-transparent text-stone-600 hover:text-stone-900 transition">
+                        4. 後漢
+                    </button>
+                    <button onclick="selectDynasty(4)" class="dynasty-tab py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-transparent text-stone-600 hover:text-stone-900 transition">
+                        5. 後周
+                    </button>
+                </div>
+
+                <!-- Dynamic Content Area -->
+                <div id="dynasty-detail" class="p-6 sm:p-8">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Exam Alert Box: 燕雲十六州 -->
+            <div class="mt-6 bg-rose-50 border-l-4 border-vermilion rounded-r-2xl p-5 shadow-sm">
+                <div class="flex items-start space-x-3">
+                    <span class="text-2xl">⚠️</span>
+                    <div>
+                        <h4 class="font-bold text-rose-900 text-base sm:text-lg mb-1">考試必考重點：石敬瑭割讓「燕雲十六州」</h4>
+                        <p class="text-sm sm:text-base text-rose-800 leading-relaxed">
+                            後晉建立者<strong>石敬瑭</strong>為藉助北方遊牧民族<strong>契丹（遼）</strong>的兵力推翻後唐，竟向契丹主耶律德光稱「兒皇帝」，並將戰略要地<strong>燕雲十六州</strong>（今北京、天津及河北、山西北部一帶）割讓給契丹。此舉令中原失去長城天險屏障，導致往後<strong>北宋</strong>長期遭受遼、金等外族南下威脅，影響深遠！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 十國割據與南優北劣 -->
+        <section id="ten-kingdoms" class="scroll-mt-20">
+            <div class="flex items-center space-x-3 mb-5">
+                <span class="w-8 h-8 rounded-lg bg-jade text-white flex items-center justify-center font-serif font-bold">三</span>
+                <h3 class="font-serif text-2xl font-bold text-stone-800">「十國」分佈與南北對比</h3>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200 mb-6">
+                <p class="text-sm sm:text-base text-stone-700 leading-relaxed mb-4">
+                    十國之中，除<strong>北漢</strong>位於今山西北部（緊依契丹，與五代對抗）外，其餘九國均位於<strong>長江流域及嶺南地區</strong>。考題一般不要求背誦全部十國君主，但需認識其地理分佈及「保境安民」政策：
+                </p>
+
+                <!-- Ten Kingdoms Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5 text-center text-sm mb-6">
+                    <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200">
+                        <div class="font-bold text-emerald-900">吳 / 南唐</div>
+                        <div class="text-xs text-emerald-700 mt-0.5">江淮地區（最富庶）</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200">
+                        <div class="font-bold text-emerald-900">吳越</div>
+                        <div class="text-xs text-emerald-700 mt-0.5">浙江一帶（興修水利）</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200">
+                        <div class="font-bold text-emerald-900">前蜀 / 後蜀</div>
+                        <div class="text-xs text-emerald-700 mt-0.5">四川盆地（天府之國）</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200">
+                        <div class="font-bold text-emerald-900">南漢</div>
+                        <div class="text-xs text-emerald-700 mt-0.5">廣東廣西（含今香港）</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200">
+                        <div class="font-bold text-emerald-900">閩 / 楚 / 南平</div>
+                        <div class="text-xs text-emerald-700 mt-0.5">福建、湖南、湖北</div>
+                    </div>
+                </div>
+                <div class="bg-amber-50/80 border border-amber-200 rounded-xl p-3.5 text-xs sm:text-sm text-amber-900 flex items-center justify-between">
+                    <span><strong>唯一在北方的十國：</strong><strong>北漢</strong>（後漢宗室劉崇在太原建立，依靠契丹生存，公元979年最後一個被北宋滅亡）。</span>
+                    <span class="hidden sm:inline-block bg-amber-200 text-amber-900 px-2 py-0.5 rounded font-bold">常考陷阱題</span>
+                </div>
+            </div>
+
+            <!-- North vs South Comparison Table -->
+            <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+                <div class="bg-stone-800 text-white px-6 py-3.5 font-bold text-base">
+                    📊 五代（北方）與 十國（南方）局勢對比
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-sm sm:text-base">
+                        <thead>
+                            <tr class="bg-stone-100 border-b border-stone-200 text-stone-700">
+                                <th class="py-3 px-4 font-bold w-1/5">比較項目</th>
+                                <th class="py-3 px-4 font-bold w-2/5 text-vermilion">北方（五代）</th>
+                                <th class="py-3 px-4 font-bold w-2/5 text-jade">南方（十國為主）</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-200">
+                            <tr>
+                                <td class="py-3.5 px-4 font-bold bg-stone-50">政治局勢</td>
+                                <td class="py-3.5 px-4">政權更替極頻密（53年換5朝14帝），武人篡奪不斷，內戰連年。</td>
+                                <td class="py-3.5 px-4">政局相對穩定，各國多採<strong>「保境安民」</strong>政策，較少大規模混戰。</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3.5 px-4 font-bold bg-stone-50">社會經濟</td>
+                                <td class="py-3.5 px-4">戰火摧殘嚴重，農田荒廢，人口大量南逃，經濟嚴重衰落。</td>
+                                <td class="py-3.5 px-4">吸納北方人口與技術，重視農桑、水利與海外貿易，經濟繁榮。</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3.5 px-4 font-bold bg-stone-50">外患壓力</td>
+                                <td class="py-3.5 px-4">直接面對北方<strong>契丹</strong>南下侵擾，喪失燕雲十六州。</td>
+                                <td class="py-3.5 px-4">遠離北方遊牧民族，無嚴重外患。</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3.5 px-4 font-bold bg-stone-50">文化藝術</td>
+                                <td class="py-3.5 px-4">文教事業受戰亂破壞，唯後唐、後周曾雕印儒家經典。</td>
+                                <td class="py-3.5 px-4">文化昌盛，如<strong>南唐後主李煜</strong>的詞作、山水畫及書法成就極高。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 時代特徵與歷史影響（答題框架） -->
+        <section id="features" class="scroll-mt-20">
+            <div class="flex items-center space-x-3 mb-5">
+                <span class="w-8 h-8 rounded-lg bg-gold text-white flex items-center justify-center font-serif font-bold">四</span>
+                <h3 class="font-serif text-2xl font-bold text-stone-800">時代特徵與歷史影響（長答題必備）</h3>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+                <!-- Point 1 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200 hover:border-vermilion/50 transition">
+                    <div class="flex items-center space-x-2.5 mb-2.5">
+                        <span class="w-7 h-7 rounded-full bg-vermilion/10 text-vermilion font-bold flex items-center justify-center text-sm">1</span>
+                        <h4 class="font-bold text-base sm:text-lg text-stone-900">武人專政，篡奪成風</h4>
+                    </div>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        五代開國君主全為<strong>節度使或禁軍統帥</strong>（如朱溫、石敬瑭、劉知遠、郭威），「兵強馬壯者為天子」成為常態。這直接促使北宋開國後推行<strong>「重文抑武」</strong>及「杯酒釋兵權」以防武人作亂。
+                    </p>
+                </div>
+
+                <!-- Point 2 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200 hover:border-jade/50 transition">
+                    <div class="flex items-center space-x-2.5 mb-2.5">
+                        <span class="w-7 h-7 rounded-full bg-jade/10 text-jade font-bold flex items-center justify-center text-sm">2</span>
+                        <h4 class="font-bold text-base sm:text-lg text-stone-900">經濟重心進一步南移</h4>
+                    </div>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        北方戰亂迫使大量百姓與士族南遷，為南方帶來勞動力與先進耕作技術；加上十國君主獎勵農耕，使<strong>江南地區成為全國經濟重心</strong>，奠定宋代「蘇湖熟，天下足」的基礎。
+                    </p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200 hover:border-amber-500/50 transition">
+                    <div class="flex items-center space-x-2.5 mb-2.5">
+                        <span class="w-7 h-7 rounded-full bg-amber-500/10 text-amber-700 font-bold flex items-center justify-center text-sm">3</span>
+                        <h4 class="font-bold text-base sm:text-lg text-stone-900">邊患加劇，國防門戶洞開</h4>
+                    </div>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        中原內耗給了契丹坐大的機會。後晉割讓<strong>燕雲十六州</strong>後，契丹騎兵可長驅直入華北平原，成為日後北宋積弱與邊防危機的根源。
+                    </p>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200 hover:border-stone-500/50 transition">
+                    <div class="flex items-center space-x-2.5 mb-2.5">
+                        <span class="w-7 h-7 rounded-full bg-stone-200 text-stone-800 font-bold flex items-center justify-center text-sm">4</span>
+                        <h4 class="font-bold text-base sm:text-lg text-stone-900">後周世宗改革，孕育統一</h4>
+                    </div>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        <strong>後周世宗（柴榮）</strong>在位期間整頓吏治、均定田賦、整編禁軍，並南征北戰收回部分失地，使後周國力大增，為大將<strong>趙匡胤</strong>建立北宋及最終統一全國奠定堅實基礎。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: 互動自測練習 -->
+        <section id="quiz" class="scroll-mt-20">
+            <div class="bg-stone-900 text-white rounded-3xl p-6 sm:p-8 shadow-lg">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-amber-400 font-bold">Exam Practice</span>
+                        <h3 class="font-serif text-2xl font-bold mt-1">中史即時小測驗（共 5 題）</h3>
+                    </div>
+                    <div id="quiz-score-badge" class="bg-white/10 px-4 py-1.5 rounded-full text-sm font-bold text-amber-300">
+                        得分：0 / 5
+                    </div>
+                </div>
+
+                <div id="quiz-container" class="space-y-6">
+                    <!-- Quiz questions rendered via JS -->
+                </div>
+
+                <div class="mt-6 pt-5 border-t border-stone-700 flex flex-wrap items-center justify-between gap-4">
+                    <p class="text-xs sm:text-sm text-stone-400">點擊選項即可即時核對答案及查看解析。</p>
+                    <button onclick="resetQuiz()" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm transition cursor-pointer">
+                        重新測驗
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-100 border-t border-stone-200 py-6 text-center text-xs sm:text-sm text-stone-500">
+        <p>香港初中中國歷史科溫習筆記 • 五代十國專題</p>
+    </footer>
+
+    <!-- Interactive Logic -->
+    <script>
+        // Data for Five Dynasties Tabs
+        const fiveDynastiesData = [
+            {
+                name: "後梁（907年－923年）",
+                founder: "朱溫（梁太祖）",
+                origin: "原為黃巢起義將領，後降唐封宣武節度使",
+                capital: "開封（汴州）",
+                duration: "16年（歷3帝）",
+                highlights: [
+                    "公元907年逼唐哀帝禪位，正式結束唐朝近三百年統治，開啟五代十國時期。",
+                    "長期與晉王李克用、李存勗父子（沙陀族勢力）在黃河兩岸激戰，民不聊生。",
+                    "最終被李存勗建立的「後唐」所滅。"
+                ],
+                tag: "五代之始"
+            },
+            {
+                name: "後唐（923年－936年）",
+                founder: "李存勗（唐莊宗）",
+                origin: "沙陀族人，其父李克用因平定黃巢之亂有功獲唐室賜姓「李」",
+                capital: "洛陽",
+                duration: "13年（歷4帝）",
+                highlights: [
+                    "李存勗滅後梁後，自認為唐朝合法繼承者，故國號仍稱「唐」。",
+                    "初期疆域為五代中最大（曾滅前蜀），但李存勗晚年寵信伶人（戲子），朝政腐敗被殺。",
+                    "末帝時，大將石敬瑭勾結契丹反叛，後唐滅亡。"
+                ],
+                tag: "沙陀建立 • 疆域最大"
+            },
+            {
+                name: "後晉（936年－947年）",
+                founder: "石敬瑭（晉高祖）",
+                origin: "沙陀族人，後唐河東節度使",
+                capital: "開封",
+                duration: "11年（歷2帝）",
+                highlights: [
+                    "為求契丹出兵助其篡位，石敬瑭向比自己年輕十歲的契丹主耶律德光稱「兒皇帝」。",
+                    "割讓戰略要地「燕雲十六州」予契丹，並每年進貢大量財帛。",
+                    "石敬瑭死後，繼位的出帝石重貴拒絕向契丹稱臣，結果契丹大舉南侵，滅亡後晉。"
+                ],
+                tag: "兒皇帝 • 割燕雲十六州"
+            },
+            {
+                name: "後漢（947年－950年）",
+                founder: "劉知遠（漢高祖）",
+                origin: "沙陀族人，後晉河東節度使",
+                capital: "開封",
+                duration: "僅4年（歷2帝）",
+                highlights: [
+                    "契丹滅後晉後，因在中原肆意搶掠遭到百姓反抗，被迫北撤；劉知遠趁勢在太原稱帝，入主開封。",
+                    "國祚僅四年，是五代中享國時間最短的政權。",
+                    "劉知遠死後，隱帝猜忌功臣，逼使大將郭威起兵反叛，後漢滅亡（宗室劉崇在太原建立「北漢」）。"
+                ],
+                tag: "五代最短命王朝"
+            },
+            {
+                name: "後周（951年－960年）",
+                founder: "郭威（周太祖）",
+                origin: "漢族人，後漢樞密使兼天雄軍節度使",
+                capital: "開封",
+                duration: "9年（歷3帝）",
+                highlights: [
+                    "郭威出身寒微，即位後提倡節儉、減輕賦稅，中原社會經濟開始復甦。",
+                    "養子周世宗（柴榮）繼位後勵精圖治，整頓軍政、興修水利，並出兵擊敗契丹收回三關，為統一全國打下基礎。",
+                    "公元960年，後周殿前都點檢趙匡胤發動「陳橋兵變」，黃袍加身，建立北宋，五代結束。"
+                ],
+                tag: "國力最強 • 孕育北宋"
+            }
+        ];
+
+        function selectDynasty(index) {
+            // Update tab styles
+            const tabs = document.querySelectorAll('.dynasty-tab');
+            tabs.forEach((tab, i) => {
+                if (i === index) {
+                    tab.classList.add('border-vermilion', 'text-vermilion', 'bg-white');
+                    tab.classList.remove('border-transparent', 'text-stone-600');
+                } else {
+                    tab.classList.remove('border-vermilion', 'text-vermilion', 'bg-white');
+                    tab.classList.add('border-transparent', 'text-stone-600');
+                }
+            });
+
+            // Render content
+            const d = fiveDynastiesData[index];
+            const detailBox = document.getElementById('dynasty-detail');
+            detailBox.innerHTML = `
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-stone-100">
+                    <h4 class="font-serif text-xl sm:text-2xl font-bold text-stone-900">${d.name}</h4>
+                    <span class="bg-vermilion/10 text-vermilion text-xs font-bold px-3 py-1 rounded-full">${d.tag}</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5 text-sm">
+                    <div class="bg-stone-50 p-3 rounded-xl">
+                        <span class="text-stone-400 block text-xs">開國君主</span>
+                        <span class="font-bold text-stone-800">${d.founder}</span>
+                    </div>
+                    <div class="bg-stone-50 p-3 rounded-xl">
+                        <span class="text-stone-400 block text-xs">定都 / 國祚</span>
+                        <span class="font-bold text-stone-800">${d.capital} • ${d.duration}</span>
+                    </div>
+                    <div class="bg-stone-50 p-3 rounded-xl">
+                        <span class="text-stone-400 block text-xs">出身背景</span>
+                        <span class="font-bold text-stone-800">${d.origin}</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-2">重要史事與考點</div>
+                    <ul class="space-y-2 text-sm sm:text-base text-stone-700">
+                        ${d.highlights.map(item => `
+                            <li class="flex items-start">
+                                <span class="text-vermilion font-bold mr-2.5">▸</span>
+                                <span>${item}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
+        // Initialize first dynasty tab
+        selectDynasty(0);
+
+        // Quiz Data & Logic
+        const quizQuestions = [
+            {
+                q: "1. 五代十國時期的政治局勢，實質上是唐代哪一種弊政的延續？",
+                options: [
+                    "A. 外戚干政",
+                    "B. 藩鎮割據",
+                    "C. 宦官專權",
+                    "D. 朋黨之爭"
+                ],
+                answer: 1,
+                explanation: "正確答案是 B。唐末地方節度使擁兵自重，朱溫篡唐後，各地強藩紛紛自立，故五代十國實為唐末藩鎮割據的延續與擴大。"
+            },
+            {
+                q: "2. 下列哪一項是北方「五代」正確的更替先後順序？",
+                options: [
+                    "A. 後梁 → 後晉 → 後唐 → 後漢 → 後周",
+                    "B. 後唐 → 後梁 → 後晉 → 後漢 → 後周",
+                    "C. 後梁 → 後唐 → 後晉 → 後漢 → 後周",
+                    "D. 後梁 → 後唐 → 後漢 → 後晉 → 後周"
+                ],
+                answer: 2,
+                explanation: "正確答案是 C。可用口訣「梁、唐、晉、漢、周，前面都有後」來記憶。"
+            },
+            {
+                q: "3. 後晉開國君主石敬瑭為求契丹出兵協助篡位，向契丹作出了什麼重大讓步？",
+                options: [
+                    "A. 割讓河套地區及稱弟",
+                    "B. 割讓燕雲十六州及自稱「兒皇帝」",
+                    "C. 開放長安作為通商口岸",
+                    "D. 每年向契丹進貢十萬匹戰馬"
+                ],
+                answer: 1,
+                explanation: "正確答案是 B。石敬瑭向契丹主耶律德光稱父皇（自稱兒皇帝），並割讓燕雲十六州，使中原失去北方天然屏障。"
+            },
+            {
+                q: "4. 在「十國」之中，唯一位於北方（今山西省一帶）的割據政權是哪一個？",
+                options: [
+                    "A. 南唐",
+                    "B. 吳越",
+                    "C. 前蜀",
+                    "D. 北漢"
+                ],
+                answer: 3,
+                explanation: "正確答案是 D。十國中九國皆在南方，唯獨「北漢」由後漢宗室劉崇在太原建立，依附契丹生存至公元979年。"
+            },
+            {
+                q: "5. 關於五代十國時期南方經濟得以發展的原因，下列哪項描述「不正確」？",
+                options: [
+                    "A. 南方政權普遍採取「保境安民」政策，戰亂較少",
+                    "B. 北方大量人口南遷，帶來勞動力與先進農耕技術",
+                    "C. 南方君主重視興修水利及發展海外貿易",
+                    "D. 契丹派兵協助南方各國開發江南農田"
+                ],
+                answer: 3,
+                explanation: "正確答案是 D。契丹活動於北方邊境，並未協助開發江南；南方繁榮主要受惠於社會安定、北人南遷及君主鼓勵農商。"
+            }
+        ];
+
+        let userAnswers = new Array(quizQuestions.length).fill(null);
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = quizQuestions.map((item, qIndex) => {
+                const answered = userAnswers[qIndex] !== null;
+                return `
+                    <div class="bg-stone-800/80 border border-stone-700 rounded-2xl p-5">
+                        <div class="font-bold text-base sm:text-lg text-stone-100 mb-3.5">${item.q}</div>
+                        <div class="grid sm:grid-cols-2 gap-2.5">
+                            ${item.options.map((opt, oIndex) => {
+                                let btnClass = "bg-stone-700/60 hover:bg-stone-700 border-stone-600 text-stone-200";
+                                if (answered) {
+                                    if (oIndex === item.answer) {
+                                        btnClass = "bg-emerald-600/30 border-emerald-400 text-emerald-200 font-bold";
+                                    } else if (oIndex === userAnswers[qIndex]) {
+                                        btnClass = "bg-rose-600/30 border-rose-400 text-rose-200";
+                                    } else {
+                                        btnClass = "bg-stone-800/40 border-stone-700 text-stone-500";
+                                    }
+                                }
+                                return `
+                                    <button 
+                                        onclick="handleAnswer(${qIndex}, ${oIndex})"
+                                        ${answered ? 'disabled' : ''}
+                                        class="text-left p-3 rounded-xl border text-sm transition cursor-pointer ${btnClass}">
+                                        ${opt}
+                                    </button>
+                                `;
+                            }).join('')}
+                        </div>
+                        ${answered ? `
+                            <div class="mt-3.5 p-3 rounded-xl text-xs sm:text-sm ${userAnswers[qIndex] === item.answer ? 'bg-emerald-950/60 text-emerald-300 border border-emerald-800' : 'bg-rose-950/60 text-rose-300 border border-rose-800'}">
+                                ${userAnswers[qIndex] === item.answer ? '✅ 答對了！' : '❌ 答錯了！'} ${item.explanation}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+
+            // Update Score
+            const score = userAnswers.reduce((acc, ans, idx) => acc + (ans === quizQuestions[idx].answer ? 1 : 0), 0);
+            document.getElementById('quiz-score-badge').textContent = `得分：${score} / ${quizQuestions.length}`;
+        }
+
+        function handleAnswer(qIndex, oIndex) {
+            if (userAnswers[qIndex] !== null) return;
+            userAnswers[qIndex] = oIndex;
+            renderQuiz();
+        }
+
+        function resetQuiz() {
+            userAnswers = new Array(quizQuestions.length).fill(null);
+            renderQuiz();
+        }
+
+        // Initial render
+        renderQuiz();
+    </script>
+</body>
+</html>
