@@ -6,7 +6,7 @@
 
 | 科目 | 連結 |
 |------|------|
-| 📜 中文歷史 (中史) | [中史/](S2/revision/中史/) |
+| 📜 中國歷史 (中史) | [中史/](S2/revision/中史/) |
 | 🔤 英文 (English) | [English/](S2/revision/英文/) |
 | 🔢 數學 (Math) | [Math/](S2/revision/數學/) |
 | 🔬 科學 (Science) | [Science/](S2/revision/科學/) |

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中二中史測驗：五代十國（10題練習）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Noto Serif TC"', 'serif'],
+                    },
+                    colors: {
+                        paper: '#FAF8F5',
+                        ink: '#2C2A29',
+                        vermilion: '#C83E37',
+                        jade: '#2E6B5E',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Sticky Header with Progress & Score -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center space-x-2.5">
+                <span class="bg-vermilion text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wider">中二中史測驗</span>
+                <h1 class="font-serif text-lg sm:text-xl font-bold text-stone-800">五代十國（907年－979年）</h1>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span id="progress-text" class="text-xs sm:text-sm font-medium text-stone-500">已答：0 / 10</span>
+                <span id="score-badge" class="bg-vermilion/10 text-vermilion font-bold text-xs sm:text-sm px-3 py-1 rounded-full">
+                    得分：0 / 10
+                </span>
+            </div>
+        </div>
+        <!-- Progress Bar -->
+        <div class="w-full bg-stone-200 h-1.5">
+            <div id="progress-bar" class="bg-vermilion h-1.5 transition-all duration-300" style="width: 0%"></div>
+        </div>
+    </header>
+
+    <!-- Main Quiz Area -->
+    <main class="max-w-4xl mx-auto w-full px-4 sm:px-6 py-8 flex-grow">
+        <div class="bg-stone-900 text-white rounded-2xl p-5 sm:p-6 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-md">
+            <div>
+                <h2 class="font-serif text-xl sm:text-2xl font-bold text-amber-300">五代十國專題自測（全卷 10 題）</h2>
+                <p class="text-xs sm:text-sm text-stone-300 mt-1">涵蓋背景由來、五代更替、燕雲十六州、十國分佈及時代影響。點擊選項即時批改。</p>
+            </div>
+            <button onclick="resetQuiz()" class="shrink-0 px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xs sm:text-sm transition cursor-pointer">
+                🔄 全部重做
+            </button>
+        </div>
+
+        <div id="quiz-list" class="space-y-6">
+            <!-- Questions injected here -->
+        </div>
+
+        <!-- Summary Card (Shown when all 10 answered) -->
+        <div id="result-summary" class="hidden mt-8 bg-white border-2 border-vermilion rounded-2xl p-6 sm:p-8 text-center shadow-lg">
+            <div class="text-3xl mb-2">🎯</div>
+            <h3 class="font-serif text-2xl font-bold text-stone-900 mb-2">測驗完成！</h3>
+            <p id="final-score-text" class="text-lg font-bold text-vermilion mb-2"></p>
+            <p id="final-comment" class="text-sm text-stone-600 mb-5"></p>
+            <button onclick="resetQuiz()" class="px-6 py-2.5 rounded-xl bg-vermilion hover:bg-rose-700 text-white font-bold text-sm transition cursor-pointer">
+                再挑戰一次
+            </button>
+        </div>
+    </main>
+
+    <footer class="bg-stone-100 border-t border-stone-200 py-5 text-center text-xs text-stone-500">
+        香港初中中國歷史科 • 五代十國練習卷
+    </footer>
+
+    <script>
+        const questions = [
+            {
+                q: "1. 公元907年，哪一位節度使逼迫唐哀帝禪位，建立後梁，正式結束唐朝統治？",
+                options: [
+                    "A. 李克用",
+                    "B. 朱溫",
+                    "C. 石敬瑭",
+                    "D. 郭威"
+                ],
+                answer: 1,
+                rationale: "宣武節度使朱溫（原為黃巢降將）於907年廢唐哀帝自立，國號「梁」（史稱後梁），開啟五代十國時期。"
+            },
+            {
+                q: "2. 下列哪一項最能概括五代十國時期的政治本質？",
+                options: [
+                    "A. 外戚與宦官交替專權",
+                    "B. 少數民族入主中原並實行漢化",
+                    "C. 唐末藩鎮割據局面的延續與擴大",
+                    "D. 世家大族壟斷朝政導致平民起義"
+                ],
+                answer: 2,
+                rationale: "五代十國的開國君主多為唐末擁兵自重的節度使，因此該時期實質上是唐末藩鎮割據的延續。"
+            },
+            {
+                q: "3. 北方「五代」在黃河流域先後更替，其正確的朝代順序是什麼？",
+                options: [
+                    "A. 後梁 → 後唐 → 後晉 → 後漢 → 後周",
+                    "B. 後唐 → 後梁 → 後晉 → 後漢 → 後周",
+                    "C. 後梁 → 後晉 → 後唐 → 後漢 → 後周",
+                    "D. 後梁 → 後唐 → 後漢 → 後晉 → 後周"
+                ],
+                answer: 0,
+                rationale: "北方五代先後為後梁、後唐、後晉、後漢、後周（口訣：「梁唐晉漢周，前面都有後」），共歷53年。"
+            },
+            {
+                q: "4. 五代之中，哪三個朝代是由沙陀族人建立的？",
+                options: [
+                    "A. 後梁、後唐、後晉",
+                    "B. 後唐、後晉、後漢",
+                    "C. 後晉、後漢、後周",
+                    "D. 後梁、後漢、後周"
+                ],
+                answer: 1,
+                rationale: "後唐（李存勗）、後晉（石敬瑭）及後漢（劉知遠）均由沙陀族將領建立；後梁（朱溫）與後周（郭威）則為漢族建立。"
+            },
+            {
+                q: "5. 後晉開國君主石敬瑭為求契丹出兵協助推翻後唐，作出了哪項喪權辱國的舉動？",
+                options: [
+                    "A. 開放洛陽及開封予契丹駐軍",
+                    "B. 將長安以西領土割讓予西夏",
+                    "C. 割讓燕雲十六州並向契丹主稱「兒皇帝」",
+                    "D. 廢除漢語並下令全國改穿契丹服飾"
+                ],
+                answer: 2,
+                rationale: "石敬瑭向比自己年輕十歲的契丹主耶律德光稱「兒皇帝」，並割讓燕雲十六州，使中原失去長城天險屏障。"
+            },
+            {
+                q: "6. 割讓「燕雲十六州」對往後中國歷史造成了什麼深遠影響？",
+                options: [
+                    "A. 導致唐朝滅亡並引發黃巢之亂",
+                    "B. 使中原失去北方天然屏障，令北宋長期受外族威脅",
+                    "C. 促使南方十國聯合出兵北伐契丹",
+                    "D. 令長江流域的海上貿易完全中斷"
+                ],
+                answer: 1,
+                rationale: "燕雲十六州是北方重要國防屏障，失去該地後，契丹（遼）騎兵可長驅直入華北平原，成為北宋積弱與邊患的根源。"
+            },
+            {
+                q: "7. 關於「十國」的地理分佈，下列哪項描述是正確的？",
+                options: [
+                    "A. 十國全部位於黃河流域以北",
+                    "B. 十國全部位於長江流域及嶺南地區",
+                    "C. 除北漢位於今山西一帶外，其餘九國皆在南方",
+                    "D. 除南唐位於南方外，其餘九國皆在西北邊疆"
+                ],
+                answer: 2,
+                rationale: "十國中九國皆在長江流域及嶺南（南方），唯獨「北漢」由後漢宗室劉崇在太原（今山西）建立。"
+            },
+            {
+                q: "8. 五代十國時期，南方經濟能夠持續發展並超越北方的主要原因是什麼？",
+                options: [
+                    "A. 南方政權普遍採取「保境安民」政策，加上北人南遷帶來勞動力與技術",
+                    "B. 契丹與南方各國結盟並提供大量資金開發江南",
+                    "C. 南方完全沒有發生任何政權更替或戰爭",
+                    "D. 五代君主下令將北方所有農民強制遷往嶺南"
+                ],
+                answer: 0,
+                rationale: "南方各國多採「保境安民」國策，戰亂較少，並吸納了大量躲避北方戰火的人口與耕作技術，推動經濟重心南移。"
+            },
+            {
+                q: "9. 後周哪一位君主在位期間整頓吏治、均定田賦及整編禁軍，使後周國力大增，為日後北宋統一奠定基礎？",
+                options: [
+                    "A. 周太祖郭威",
+                    "B. 周世宗柴榮",
+                    "C. 唐莊宗李存勗",
+                    "D. 晉高祖石敬瑭"
+                ],
+                answer: 1,
+                rationale: "後周世宗（柴榮）勵精圖治，在政治、經濟與軍事上推行改革，使後周成為五代中最強盛的政權，為趙匡胤統一全國鋪路。"
+            },
+            {
+                q: "10. 哪一個政權於公元979年最後一個被北宋消滅，標誌著五代十國分裂局面的正式結束？",
+                options: [
+                    "A. 南唐",
+                    "B. 吳越",
+                    "C. 後蜀",
+                    "D. 北漢"
+                ],
+                answer: 3,
+                rationale: "北漢依附契丹生存至公元979年，最終被宋太宗親征攻滅，五代十國時期至此完全結束。"
+            }
+        ];
+
+        let userAnswers = new Array(questions.length).fill(null);
+
+        function renderQuiz() {
+            const listEl = document.getElementById('quiz-list');
+            listEl.innerHTML = questions.map((item, qIdx) => {
+                const answered = userAnswers[qIdx] !== null;
+                return `
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-stone-200 transition">
+                        <div class="font-bold text-base sm:text-lg text-stone-900 mb-4 leading-snug">${item.q}</div>
+                        <div class="grid sm:grid-cols-2 gap-3">
+                            ${item.options.map((opt, oIdx) => {
+                                let style = "bg-stone-50 hover:bg-stone-100 border-stone-200 text-stone-800";
+                                if (answered) {
+                                    if (oIdx === item.answer) {
+                                        style = "bg-emerald-50 border-emerald-500 text-emerald-900 font-bold";
+                                    } else if (oIdx === userAnswers[qIdx]) {
+                                        style = "bg-rose-50 border-rose-500 text-rose-900";
+                                    } else {
+                                        style = "bg-stone-50/50 border-stone-200 text-stone-400";
+                                    }
+                                }
+                                return `
+                                    <button 
+                                        onclick="selectOption(${qIdx}, ${oIdx})"
+                                        ${answered ? 'disabled' : ''}
+                                        class="text-left p-3.5 rounded-xl border text-sm sm:text-base transition cursor-pointer ${style}">
+                                        ${opt}
+                                    </button>
+                                `;
+                            }).join('')}
+                        </div>
+                        ${answered ? `
+                            <div class="mt-4 p-3.5 rounded-xl text-xs sm:text-sm leading-relaxed ${userAnswers[qIdx] === item.answer ? 'bg-emerald-50/80 text-emerald-900 border border-emerald-200' : 'bg-rose-50/80 text-rose-900 border border-rose-200'}">
+                                <strong>${userAnswers[qIdx] === item.answer ? '✅ 正確！' : '❌ 錯誤！'}</strong> ${item.rationale}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+
+            updateStatus();
+        }
+
+        function selectOption(qIdx, oIdx) {
+            if (userAnswers[qIdx] !== null) return;
+            userAnswers[qIdx] = oIdx;
+            renderQuiz();
+        }
+
+        function updateStatus() {
+            const answeredCount = userAnswers.filter(a => a !== null).length;
+            const score = userAnswers.reduce((sum, ans, idx) => sum + (ans === questions[idx].answer ? 1 : 0), 0);
+
+            document.getElementById('progress-text').textContent = `已答：${answeredCount} / ${questions.length}`;
+            document.getElementById('score-badge').textContent = `得分：${score} / ${questions.length}`;
+            document.getElementById('progress-bar').style.width = `${(answeredCount / questions.length) * 100}%`;
+
+            const summaryEl = document.getElementById('result-summary');
+            if (answeredCount === questions.length) {
+                summaryEl.classList.remove('hidden');
+                document.getElementById('final-score-text').textContent = `你的最終得分：${score} / 10 分`;
+                let comment = "";
+                if (score >= 9) comment = "太棒了！你已完全掌握五代十國的核心考點！";
+                else if (score >= 7) comment = "成績不錯！重溫一下答錯題目的解析會更穩陣。";
+                else comment = "繼續加油！建議先重溫《五代十國精讀筆記》再挑戰一次。";
+                document.getElementById('final-comment').textContent = comment;
+            } else {
+                summaryEl.classList.add('hidden');
+            }
+        }
+
+        function resetQuiz() {
+            userAnswers = new Array(questions.length).fill(null);
+            renderQuiz();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        renderQuiz();
+    </script>
+</body>
+</html>
