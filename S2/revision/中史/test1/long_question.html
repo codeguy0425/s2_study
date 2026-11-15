@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中二中史長答題與資料題特訓：五代十國與北宋前期</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Noto Serif TC"', 'serif'],
+                    },
+                    colors: {
+                        paper: '#F9F7F3',
+                        ink: '#292524',
+                        vermilion: '#C83E37',
+                        celadon: '#2F6F65',
+                        ochre: '#B47B2B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Sticky Top Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center space-x-2.5">
+                <span class="bg-stone-800 text-amber-300 text-xs font-bold px-2.5 py-1 rounded-md tracking-wider">中二中史試題特訓</span>
+                <h1 class="font-serif text-lg sm:text-xl font-bold text-stone-800">資料題與長答題精練（附評分標準及範文）</h1>
+            </div>
+            <!-- Topic Filter -->
+            <div class="flex gap-1.5 text-xs sm:text-sm">
+                <button onclick="filterTopic('all')" class="topic-btn px-3 py-1.5 rounded-lg bg-stone-800 text-white font-bold transition cursor-pointer" data-topic="all">全部題目 (4題)</button>
+                <button onclick="filterTopic('wudai')" class="topic-btn px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium transition cursor-pointer" data-topic="wudai">五代十國</button>
+                <button onclick="filterTopic('song')" class="topic-btn px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium transition cursor-pointer" data-topic="song">北宋國策與變法</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto w-full px-4 sm:px-6 py-8 flex-grow">
+
+        <!-- Exam Answering Strategy Tip Box -->
+        <section class="bg-gradient-to-r from-stone-900 to-stone-800 text-white rounded-2xl p-5 sm:p-6 mb-8 shadow-md">
+            <h2 class="font-serif text-lg sm:text-xl font-bold text-amber-300 mb-2">✍️ 香港初中中史長答題高分技巧（PEEL 結構）</h2>
+            <div class="grid sm:grid-cols-4 gap-3 text-xs sm:text-sm text-stone-200">
+                <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+                    <strong class="text-amber-300 block mb-0.5">1. 標點分段（Point）</strong>
+                    每段只寫一個核心論點，開首用「首先」、「其次」、「最後」清晰標示。
+                </div>
+                <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+                    <strong class="text-amber-300 block mb-0.5">2. 援引史實（Evidence）</strong>
+                    必須寫出具體人名、制度或事件（如石敬瑭、通判、更戍法、三冗）。
+                </div>
+                <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+                    <strong class="text-amber-300 block mb-0.5">3. 扣題分析（Explanation）</strong>
+                    解釋該史實「如何」導致題目所問的結果（因果關係要明確）。
+                </div>
+                <div class="bg-white/10 rounded-xl p-3 border border-white/10">
+                    <strong class="text-amber-300 block mb-0.5">4. 資料題關鍵（Link）</strong>
+                    若題目要求「根據資料」，務必先引用資料原文線索，再結合所學補充。
+                </div>
+            </div>
+        </section>
+
+        <!-- Questions Container -->
+        <div id="questions-container" class="space-y-8">
+            <!-- Injected via JS -->
+        </div>
+
+    </main>
+
+    <footer class="bg-stone-100 border-t border-stone-200 py-5 text-center text-xs text-stone-500">
+        香港初中中國歷史科 • 資料題與長答題特訓庫
+    </footer>
+
+    <script>
+        const longQuestionsData = [
+            {
+                id: "q1",
+                topic: "wudai",
+                badge: "五代十國 • 歷史資料題",
+                badgeColor: "bg-vermilion text-white",
+                title: "第一題：五代十國的政治弊病與南北差異（共 12 分）",
+                sourceText: `
+                    <div class="bg-amber-50/70 border-l-4 border-amber-600 p-4 rounded-r-xl mb-4 text-sm sm:text-base text-stone-800 space-y-2.5">
+                        <div class="font-bold text-amber-950">【資料一】節錄自《新五代史》</div>
+                        <p class="leading-relaxed">「五代之亂，天子（皇帝）之置，如弈棋然（像下棋一樣頻繁更換）。自朱溫篡唐至周亡，五十餘年間，易五姓（五個朝代），更十三君，而死於非命者過半。藩鎮強大者，動輒稱兵犯闕（起兵進攻京城）。」</p>
+                        <div class="font-bold text-amber-950 pt-1">【資料二】五代十國時期南北局勢簡述</div>
+                        <p class="leading-relaxed">「北方戰火連年，契丹鐵騎屢次南下掠奪；反觀南方吳越、南唐、後蜀等國，多能休養生息，勸課農桑，開闢水利，並招徠北方流民開墾荒地。」</p>
+                    </div>
+                `,
+                subQuestions: [
+                    {
+                        q: "(a) 根據資料一，概括北方「五代」時期政治局勢的兩項特徵。（4分）",
+                        marks: "4分（每項2分）",
+                        points: [
+                            "政權更替極度頻密，皇帝在位時間短暫且多死於非命（資料線索：「五十餘年間，易五姓，更十三君，而死於非命者過半」）。",
+                            "武人專政，藩鎮割據與兵變篡奪成風（資料線索：「藩鎮強大者，動輒稱兵犯闕」）。"
+                        ],
+                        modelAnswer: "根據資料一，北方「五代」的政治局勢有以下兩項特徵：\n1. 政權更替極度頻密：五代在五十餘年間便更換了五個朝代及十多位君主，且過半數君主死於非命，政局極不穩定。\n2. 武人跋扈與篡奪成風：地方強大的藩鎮節度使擁兵自重，動輒發動兵變推翻中央政權，實質是唐末藩鎮割據的延續。"
+                    },
+                    {
+                        q: "(b) 結合資料二及就你所知，分析五代十國時期中國經濟重心進一步南移的原因。（8分）",
+                        marks: "8分（4個論點，每點2分）",
+                        points: [
+                            "【北方戰亂破壞】北方五代內戰不斷，加上契丹多次南侵掠奪（資料二），嚴重摧毀黃河流域的農業生產。",
+                            "【南方政局安定】南方十國多採取「保境安民」政策，較少發生大規模混戰，為經濟發展提供穩定環境。",
+                            "【北人南遷補充勞動力】大批北方百姓與士族為躲避戰火南逃，為江南帶來充沛的勞動力及先進耕作技術（資料二：「招徠北方流民開墾荒地」）。",
+                            "【南方君主重視農商】南方各國君主積極勸課農桑、興修水利（如吳越王錢鏐修築海塘）及發展海外貿易，推動江南經濟超越北方。"
+                        ],
+                        modelAnswer: "五代十國時期中國經濟重心進一步南移，主要基於以下四個原因：\n\n首先，北方戰亂摧殘經濟。根據資料二，北方五代時期內戰連年，加上北方契丹騎兵屢次南下侵擾，導致黃河流域農田荒廢，經濟嚴重衰落。\n\n其次，南方政局相對安定。南方十國（如吳越、南唐、後蜀等）普遍採取「保境安民」的國策，彼此較少大規模混戰，使百姓得以休養生息。\n\n第三，人口南遷帶來技術與勞動力。大量北方流民為避戰禍遷居江南（資料二），不僅增加了南方的耕作勞動力，更將北方先進的農業生產技術傳入南方。\n\n最後，南方君主積極鼓勵農商。南方各國統治者重視勸課農桑與興修水利（如吳越興修水利工程），並鼓勵海外貿易，使長江流域及嶺南地區日趨富庶，奠定日後宋代「蘇湖熟，天下足」的經濟格局。"
+                    }
+                ]
+            },
+            {
+                id: "q2",
+                topic: "wudai",
+                badge: "五代十國 • 論述長答題",
+                badgeColor: "bg-rose-800 text-white",
+                title: "第二題：燕雲十六州的割讓與歷史影響（共 10 分）",
+                sourceText: "",
+                subQuestions: [
+                    {
+                        q: "(a) 簡述後晉開國君主石敬瑭割讓「燕雲十六州」的經過。（4分）",
+                        marks: "4分",
+                        points: [
+                            "背景：石敬瑭原為後唐河東節度使，因受後唐末帝猜忌而起兵反叛，但兵力不足。",
+                            "勾結契丹：石敬瑭向北方遊牧民族契丹（遼）求援，向比自己年輕十歲的契丹主耶律德光稱「兒皇帝」。",
+                            "割地代價（公元936年）：在契丹出兵協助下，石敬瑭滅後唐建立「後晉」，隨即踐約將戰略要地燕雲十六州（今北京、天津及河北、山西北部一帶）割讓予契丹，並每年進貢大量財帛。"
+                        ],
+                        modelAnswer: "公元936年，後唐河東節度使石敬瑭起兵反抗後唐，因自身兵力不足，遂向北方契丹求援。石敬瑭不惜向比自己年輕十歲的契丹主耶律德光自稱「兒皇帝」，並許諾事成後割地進貢。契丹遂出兵助石敬瑭滅亡後唐，建立「後晉」。石敬瑭即位後，正式將戰略要地「燕雲十六州」割讓給契丹。"
+                    },
+                    {
+                        q: "(b) 試分析失去「燕雲十六州」對中原王朝（尤其是往後的北宋）造成什麼深遠影響？（6分）",
+                        marks: "6分（3個論點，每點2分）",
+                        points: [
+                            "【喪失北方天然屏障】燕雲十六州地處長城沿線，山川險要；失去該地後，中原門戶洞開，遊牧民族騎兵可長驅直入華北平原。",
+                            "【北宋國防長期被動】北宋建立後定都平原地帶的開封，無險可守，被迫在邊境駐紮重兵防禦，造成龐大軍費開支（「冗兵」、「冗費」）。",
+                            "【導致北宋對外屈辱求和】北宋多次北伐收復燕雲均告失敗（如高梁河之戰），最終被迫與遼訂立「澶淵之盟」，每年輸納「歲幣」以換取和平，助長積弱局面。"
+                        ],
+                        modelAnswer: "失去「燕雲十六州」對中原王朝造成極其深遠的負面影響：\n\n第一，中原喪失北方天然屏障。燕雲十六州位於長城沿線，地勢險要，是抵禦北方遊牧民族南下的關鍵防線。割讓後，中原門戶洞開，契丹鐵騎可毫無阻隔地長驅直入華北平原。\n\n第二，加重北宋的軍事與財政負擔。北宋建立後定都於無險可守的開封，為防範遼軍突襲，朝廷不得不在河北邊境常年駐紮重兵，直接加劇了北宋「冗兵」與「冗費」的財政危機。\n\n第三，造成北宋對外積弱的局面。宋太宗曾兩度北伐圖謀收復燕雲十六州均遭慘敗，令北宋對遼轉攻為守，最終在1004年被迫訂立「澶淵之盟」，每年向遼輸送大量「歲幣」以求苟安。"
+                    }
+                ]
+            },
+            {
+                id: "q3",
+                topic: "song",
+                badge: "北宋統治政策 • 歷史資料題",
+                badgeColor: "bg-celadon text-white",
+                title: "第三題：宋初「強幹弱枝」政策與中央集權（共 12 分）",
+                sourceText: `
+                    <div class="bg-teal-50/70 border-l-4 border-celadon p-4 rounded-r-xl mb-4 text-sm sm:text-base text-stone-800 space-y-2.5">
+                        <div class="font-bold text-teal-950">【資料一】宋太祖與宰相趙普的對話（節錄自《續資治通鑑長編》）</div>
+                        <p class="leading-relaxed">「太祖問趙普曰：『天下自唐季（唐末）以來，數十年間，帝王凡易八姓，戰鬥不息，生民塗地，其故何也？吾欲息天下之兵，為國家長久計，其道何如？』普曰：『此非他故，方鎮太重，君弱臣強而已。今所以治之，亦無他奇巧，惟稍奪其權，制其錢穀，收其精兵，則天下自安矣。』」</p>
+                    </div>
+                `,
+                subQuestions: [
+                    {
+                        q: "(a) 根據資料一，趙普認為唐末五代以來戰亂不息的根本原因是什么？（2分）",
+                        marks: "2分",
+                        points: [
+                            "地方藩鎮權力過大，而中央君主勢力微弱（「方鎮太重，君弱臣強」）。"
+                        ],
+                        modelAnswer: "根據資料一，趙普認為唐末五代戰亂不息的根本原因在於「方鎮太重，君弱臣強」，即地方節度使擁兵自重、權力過大，而中央皇權衰弱，導致武人頻繁發動兵變篡奪。"
+                    },
+                    {
+                        q: "(b) 承上題，宋太祖如何落實趙普提出的「奪其權」、「制其錢穀」及「收其精兵」三項建議？試各舉一項具體措施說明。（10分）",
+                        marks: "10分（三方面各佔3分，結構清晰及完整表達佔1分）",
+                        points: [
+                            "【奪其權（削奪地方行政與軍事權）】派中央文官出任地方「知州」（三年一任），取代節度使實權；同時在各州設「通判」監督牽制知州，公文須聯署方能生效。",
+                            "【制其錢穀（將地方財賦收歸中央）】在各路設置「轉運使」，規定地方賦稅除保留極少數必要開支外，其餘全數運往京師開封，斷絕地方叛亂的經濟基礎。",
+                            "【收其精兵（將軍權集中於中央）】透過「杯酒釋兵權」解除禁軍高級將領兵權；挑選地方精銳編入中央「禁軍」（半數駐守京師）；實行「兵權三分」（樞密院掌調兵權、三衙掌統兵權）及「更戍法」（定期調動駐軍而將領不隨行）。"
+                        ],
+                        modelAnswer: "宋太祖全面採納趙普「強幹弱枝」的建議，從以下三方面加強中央集權：\n\n1. 「奪其權」（削奪地方行政權）：宋太祖罷免節度使實權，改派中央文官出任地方長官（「知州」），並規定三年一任；同時在各州設置「通判」（人稱「監州」）監督知州，所有地方公文必須經知州與通判共同簽署才有效，使地方官員互相牽制，無法專權。\n\n2. 「制其錢穀」（集中地方財權）：朝廷在各路設置「轉運使」，規定地方徵收的賦稅除保留極少數日常必要開支外，其餘財賦必須全數運往京師開封。此舉徹底截斷了地方勢力養兵作亂的經濟基礎。\n\n3. 「收其精兵」（集中軍權於中央）：宋太祖首先透過「杯酒釋兵權」和平解除石守信等禁軍大將的兵權；其次挑選各地精銳士兵編入中央「禁軍」，半數駐守京師以鎮壓內外；此外更實行「兵權三分」（文官掌樞密院負責調兵、武將掌三衙負責統兵）及「更戍法」（定期輪調禁軍駐地而將領不隨行），徹底防止將領培植私人勢力。"
+                    }
+                ]
+            },
+            {
+                id: "q4",
+                topic: "song",
+                badge: "文人政治與改革背景 • 論述長答題",
+                badgeColor: "bg-ochre text-white",
+                title: "第四題：宋代「重文抑武」國策與北宋中葉「積貧積弱」的關係（共 12 分）",
+                sourceText: "",
+                subQuestions: [
+                    {
+                        q: "「宋初推行『重文抑武』及中央集權政策，雖根除了武人割據，卻直接埋下了北宋中葉『積貧積弱』的禍根。」你同意這個說法嗎？試結合史實加以析論。（12分）",
+                        marks: "12分（立場明確 + 4個因果論點，每點3分）",
+                        points: [
+                            "【明確立場】同意。宋初政策過度防弊，雖收「強幹弱枝」之效，卻衍生嚴重弊端。",
+                            "【論點一：行政集權與科舉過濫 ➔ 冗官 ➔ 積貧】為分化事權而增設大量官職（如參知政事、通判），加上大幅擴充科舉名額及實行「恩蔭」制度，令官員人數激增（「冗官」），朝廷俸祿開支浩繁，加重財政負擔。",
+                            "【論點二：荒年募兵政策 ➔ 冗兵與冗費 ➔ 積貧】為防流民作亂，朝廷實行「募兵制」（荒年募兵，只增不減），使軍隊總數膨脹至一百二十多萬（「冗兵」），軍費佔國家財政支出七成以上，導致國庫空虛。",
+                            "【論點三：更戍法與文官統兵 ➔ 軍隊戰力低下 ➔ 積弱】推行「更戍法」導致「兵不識將，將不識兵」，加上「重文抑武」下由不懂軍事的文官指揮作戰，軍隊戰鬥力大減，對遼、西夏作戰屢戰屢敗。",
+                            "【論點四：戰敗求和納歲幣 ➔ 冗費劇增 ➔ 積貧積弱交織】軍事「積弱」使北宋被迫與遼訂立「澶淵之盟」及與西夏議和，每年輸送巨額銀、絹、茶葉（「歲幣」），形成龐大「冗費」，進一步加劇「積貧」，最終逼使北宋推行慶曆新政及王安石變法。"
+                        ],
+                        modelAnswer: "我完全同意這個說法。宋初為防止唐末五代藩鎮割據重演，推行「重文抑武」及過度集權的國策，雖然成功維持了內部長期穩定，但卻直接導致北宋中葉陷入「積貧」與「積弱」的危機，具體原因如下：\n\n第一，官僚機構膨脹造成「冗官」，導致財政「積貧」。宋初為削弱相權與地方權力，採取分化事權原則（如設參知政事、通判等）；同時為提倡文治，大幅增加科舉取士名額並濫施「恩蔭」特權。結果官員數目激增，人浮於事，朝廷每年需支付龐大俸祿，令國庫入不敷出。\n\n第二，荒年募兵政策造成「冗兵」，加劇財政負擔。宋朝實行「募兵制」，每逢災荒便招募流民當兵以防民變，且士兵只增不減。至北宋中葉，禁軍與廂軍總數高達一百二十多萬，軍費開支佔國家總收入七成以上，使財政更趨困窘。\n\n第三，更戍法與文官統兵削弱軍力，導致國防「積弱」。宋初推行「更戍法」，定期調動駐軍而將領不隨行，造成「兵不識將，將不識兵」；加上「重文抑武」下樞密院及前線主帥多由不懂軍事的文官出任，武將處處受制，導致宋軍作戰指揮不靈，戰鬥力大減。\n\n第四，軍事積弱引致屈辱求和，形成巨額「冗費」。由於軍隊戰鬥力低下，北宋對遼與西夏交戰屢敗，被迫訂立「澶淵之盟」（1004年）及「慶曆和議」（1044年），每年向遼、夏輸送大量銀兩、絹帛與茶葉作為「歲幣」。這筆巨額「冗費」進一步掏空國庫，形成「積弱加劇積貧，積貧又限制強軍」的惡性循環。\n\n綜上所述，宋初的集權與重文政策正是北宋中葉「三冗」與「積貧積弱」的直接根源，最終逼使范仲淹與王安石先後發動變法圖強。"
+                    }
+                ]
+            }
+        ];
+
+        let currentTopic = 'all';
+
+        function renderQuestions() {
+            const container = document.getElementById('questions-container');
+            const filtered = currentTopic === 'all' 
+                ? longQuestionsData 
+                : longQuestionsData.filter(q => q.topic === currentTopic);
+
+            container.innerHTML = filtered.map((item, idx) => `
+                <article class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-stone-200">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                        <span class="text-xs font-bold px-3 py-1 rounded-full ${item.badgeColor}">${item.badge}</span>
+                        <span class="text-xs text-stone-400 font-medium">建議作答時間：15 - 20 分鐘</span>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-stone-900 mb-4">${item.title}</h3>
+                    
+                    ${item.sourceText}
+
+                    <div class="space-y-6 mt-4">
+                        ${item.subQuestions.map((sub, sIdx) => {
+                            const uniqueId = `${item.id}-sub-${sIdx}`;
+                            return `
+                                <div class="border border-stone-200 rounded-xl p-4 sm:p-5 bg-stone-50/50">
+                                    <div class="font-bold text-base sm:text-lg text-stone-900 mb-3 leading-snug">${sub.q}</div>
+                                    
+                                    <!-- Student Scratchpad / Practice Area -->
+                                    <textarea 
+                                        rows="4" 
+                                        placeholder="✍️ 你可以在此先輸入你的答題大綱或草稿，再點擊下方按鈕核對評分標準與參考範文..."
+                                        class="w-full rounded-xl border border-stone-300 bg-white p-3 text-sm text-stone-800 focus:outline-none focus:border-stone-600 transition mb-3"></textarea>
+
+                                    <div class="flex flex-wrap items-center justify-between gap-2">
+                                        <span class="text-xs font-bold text-stone-500">配分標準：${sub.marks}</span>
+                                        <button 
+                                            onclick="toggleAnswer('${uniqueId}')" 
+                                            id="btn-${uniqueId}"
+                                            class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-700 text-white font-bold text-xs sm:text-sm transition cursor-pointer">
+                                            👁️ 查看評分標準與參考範文
+                                        </button>
+                                    </div>
+
+                                    <!-- Hidden Marking Scheme & Model Answer -->
+                                    <div id="ans-${uniqueId}" class="hidden mt-4 pt-4 border-t border-stone-200 space-y-4">
+                                        <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                                            <div class="font-bold text-amber-950 text-sm mb-2">📋 評分重點（得分關鍵詞）：</div>
+                                            <ul class="space-y-1.5 text-xs sm:text-sm text-amber-900 list-disc pl-5">
+                                                ${sub.points.map(pt => `<li>${pt}</li>`).join('')}
+                                            </ul>
+                                        </div>
+                                        <div class="bg-emerald-50/80 border border-emerald-200 rounded-xl p-4">
+                                            <div class="font-bold text-emerald-950 text-sm mb-2">🌟 滿分參考範文：</div>
+                                            <div class="text-xs sm:text-sm text-emerald-950 leading-relaxed whitespace-pre-line">${sub.modelAnswer}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function toggleAnswer(uniqueId) {
+            const ansBox = document.getElementById(`ans-${uniqueId}`);
+            const btn = document.getElementById(`btn-${uniqueId}`);
+            if (ansBox.classList.contains('hidden')) {
+                ansBox.classList.remove('hidden');
+                btn.textContent = "🙈 隱藏評分標準與範文";
+                btn.classList.replace('bg-stone-800', 'bg-stone-500');
+            } else {
+                ansBox.classList.add('hidden');
+                btn.textContent = "👁️ 查看評分標準與參考範文";
+                btn.classList.replace('bg-stone-500', 'bg-stone-800');
+            }
+        }
+
+        function filterTopic(topic) {
+            currentTopic = topic;
+            document.querySelectorAll('.topic-btn').forEach(btn => {
+                if (btn.dataset.topic === topic) {
+                    btn.className = "topic-btn px-3 py-1.5 rounded-lg bg-stone-800 text-white font-bold transition cursor-pointer";
+                } else {
+                    btn.className = "topic-btn px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-700 font-medium transition cursor-pointer";
+                }
+            });
+            renderQuestions();
+        }
+
+        renderQuestions();
+    </script>
+</body>
+</html>
