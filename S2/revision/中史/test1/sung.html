@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中二中史精讀：宋朝統治、文人政治與改革背景</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Sans TC & Noto Serif TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Noto Serif TC"', 'serif'],
+                    },
+                    colors: {
+                        paper: '#F7F8F6',
+                        ink: '#262928',
+                        celadon: '#2F6F65',   /* 宋代汝窯青瓷色 */
+                        vermilion: '#C83E37', /* 硃砂紅 */
+                        ochre: '#B47B2B',     /* 赭石金 */
+                        slateink: '#334155',  /* 徽墨藍灰 */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-celadon selection:text-white">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="bg-celadon text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wider">中二中史</span>
+                <h1 class="font-serif text-lg sm:text-xl font-bold text-stone-800">北宋建立、文人政治與變法背景</h1>
+            </div>
+            <nav class="flex space-x-1 sm:space-x-2 text-xs sm:text-sm font-medium overflow-x-auto py-1">
+                <a href="#establishment" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">建立與國策</a>
+                <a href="#literati" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">文人政治</a>
+                <a href="#reform-bg" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">改革背景</a>
+                <a href="#exam-framework" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">答題框架</a>
+                <a href="#quiz" class="px-3 py-1.5 rounded-lg bg-celadon/10 text-celadon hover:bg-celadon hover:text-white transition font-bold">小測驗</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="bg-gradient-to-br from-slate-900 via-teal-950 to-stone-900 text-white py-10 sm:py-14 px-4 sm:px-6 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="inline-block border border-teal-400/40 text-teal-200 text-xs sm:text-sm px-3 py-1 rounded-full mb-3">
+                香港初中中國歷史科 • 宋元時期專題（一）
+            </div>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight mb-4 leading-tight">
+                重文抑武的雙刃劍：<span class="text-teal-300">宋初國策與積弱危機</span>
+            </h2>
+            <p class="text-stone-300 text-sm sm:text-base max-w-2xl leading-relaxed mb-6">
+                公元960年趙匡胤建立北宋。為徹底根除唐末五代以來「藩鎮割據、武人篡奪」的亂局，宋初確立「強幹弱枝、重文抑武」國策。這雖然結束了內部動盪並造就璀璨的文人政治，卻也埋下「三冗」與「積貧積弱」的隱患，逼使北宋走上改革之路。
+            </p>
+            <!-- Key Concept Pills -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl">
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-teal-200/80">北宋建立</div>
+                    <div class="font-bold text-base sm:text-lg text-white">960年 • 陳橋兵變</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-teal-200/80">統一策略</div>
+                    <div class="font-bold text-base sm:text-lg text-teal-300">先南後北 • 先易後難</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-teal-200/80">核心國策</div>
+                    <div class="font-bold text-base sm:text-lg text-white">強幹弱枝 • 重文抑武</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-teal-200/80">改革導火線</div>
+                    <div class="font-bold text-base sm:text-lg text-amber-300">三冗危機 • 積貧積弱</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12">
+
+        <!-- Section 1: 宋朝建立與集權統治政策 -->
+        <section id="establishment" class="scroll-mt-20">
+            <div class="flex items-center space-x-3 mb-5">
+                <span class="w-8 h-8 rounded-lg bg-celadon text-white flex items-center justify-center font-serif font-bold">一</span>
+                <h3 class="font-serif text-2xl font-bold text-stone-800">北宋的建立與中央集權政策</h3>
+            </div>
+
+            <!-- Part A: 建立與統一 -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200 mb-6">
+                <h4 class="font-bold text-lg text-celadon mb-3 flex items-center">
+                    <span class="mr-2">🚩</span> 1. 陳橋兵變與統一方略
+                </h4>
+                <div class="grid md:grid-cols-2 gap-5 text-sm sm:text-base text-stone-700 leading-relaxed">
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-200/80">
+                        <div class="font-bold text-stone-900 mb-1.5">陳橋兵變（公元960年）</div>
+                        <p>後周殿前都點檢<strong>趙匡胤</strong>奉命北上抵禦契丹與北漢聯軍，行至開封東北的<strong>陳橋驛</strong>時，部下發動兵變，為他披上黃袍（史稱「黃袍加身」）。趙匡胤回師逼後周恭帝禪位，定都<strong>開封（汴京）</strong>，國號<strong>「宋」</strong>（史稱北宋），是為宋太祖。</p>
+                    </div>
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-200/80">
+                        <div class="font-bold text-stone-900 mb-1.5">「先南後北，先易後難」方略</div>
+                        <p>採納宰相<strong>趙普</strong>建議，先攻滅物產豐富但軍力較弱的南方割據政權（如南平、後蜀、南漢、南唐等），集中全國財力後，再由宋太宗於<strong>979年</strong>攻滅依附契丹的<strong>北漢</strong>，結束五代十國分裂局面（唯燕雲十六州仍在遼國手中）。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part B: 強幹弱枝政策（互動切換） -->
+            <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+                <div class="bg-stone-800 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-2">
+                    <span class="font-bold text-base sm:text-lg">🏛️ 2. 宋初「強幹弱枝」中央集權四大措施</span>
+                    <span class="text-xs bg-teal-600/40 text-teal-200 border border-teal-400/30 px-2.5 py-1 rounded-full">
+                        目標：收兵權、削相權、制地方、集財權
+                    </span>
+                </div>
+
+                <!-- Interactive Tabs -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 border-b border-stone-200 bg-stone-50 text-center" id="policy-tabs">
+                    <button onclick="selectPolicy(0)" class="policy-tab py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-celadon text-celadon bg-white transition cursor-pointer">
+                        ⚔️ 軍事集權
+                    </button>
+                    <button onclick="selectPolicy(1)" class="policy-tab py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-transparent text-stone-600 hover:text-stone-900 transition cursor-pointer">
+                        📜 行政削相
+                    </button>
+                    <button onclick="selectPolicy(2)" class="policy-tab py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-transparent text-stone-600 hover:text-stone-900 transition cursor-pointer">
+                        🗺️ 地方控制
+                    </button>
+                    <button onclick="selectPolicy(3)" class="policy-tab py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-transparent text-stone-600 hover:text-stone-900 transition cursor-pointer">
+                        💰 財政集中
+                    </button>
+                </div>
+
+                <!-- Dynamic Policy Detail -->
+                <div id="policy-detail" class="p-6 sm:p-7">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 宋代的文人政治 -->
+        <section id="literati" class="scroll-mt-20">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-lg bg-slateink text-white flex items-center justify-center font-serif font-bold">二</span>
+                    <h3 class="font-serif text-2xl font-bold text-stone-800">宋代的「文人政治」</h3>
+                </div>
+                <span class="text-xs font-medium bg-slate-200 text-slate-800 px-3 py-1 rounded-full">
+                    名言：「萬般皆下品，唯有讀書高」
+                </span>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-5 mb-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200">
+                    <div class="text-2xl mb-2">🎓</div>
+                    <h4 class="font-bold text-base sm:text-lg text-stone-900 mb-2">1. 大幅擴充科舉取士</h4>
+                    <ul class="space-y-2 text-sm text-stone-600 leading-relaxed">
+                        <li>• <strong>增加名額：</strong>每科錄取進士動輒數百人，遠超唐代（唐代每次僅二三十人）。</li>
+                        <li>• <strong>確立殿試：</strong>由皇帝親自主持最終考試，使及第者成為「天子門生」，效忠皇室。</li>
+                        <li>• <strong>糊名與謄錄：</strong>遮蓋考生姓名並派專人抄錄試卷，防止考官舞弊，打破門第限制，平民亦能入仕。</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200">
+                    <div class="text-2xl mb-2">✒️</div>
+                    <h4 class="font-bold text-base sm:text-lg text-stone-900 mb-2">2. 崇文抑武，文臣掌軍</h4>
+                    <ul class="space-y-2 text-sm text-stone-600 leading-relaxed">
+                        <li>• <strong>文官居高位：</strong>中央要職（如樞密使、三司使）及地方知州均以文官出任，武將地位低微，處處受文官牽制。</li>
+                        <li>• <strong>優厚士大夫：</strong>給予文官極高俸祿與恩蔭特權（一人做官，子孫親屬皆可得官）。</li>
+                        <li>• <strong>不殺大臣：</strong>宋太祖立下誓碑，戒律後世子孫「不得殺士大夫及上書言事人」。</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200">
+                    <div class="text-2xl mb-2">⚖️</div>
+                    <h4 class="font-bold text-base sm:text-lg text-stone-900 mb-2">3. 臺諫合一，言路開放</h4>
+                    <ul class="space-y-2 text-sm text-stone-600 leading-relaxed">
+                        <li>• <strong>強化監察權：</strong>御史台（監察百官）與諫院（規諫皇帝）職權擴大，允許「風聞言事」（無需確鑿證據亦可彈劾）。</li>
+                        <li>• <strong>士大夫政治自覺：</strong>讀書人以天下為己任，如范仲淹提出<strong>「先天下之憂而憂，後天下之樂而樂」</strong>，形成濃厚的議政與改革風氣。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pros & Cons of Literati Politics -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200">
+                <h4 class="font-bold text-base sm:text-lg text-stone-900 mb-4">📊 評估：宋代「文人政治」的正反影響</h4>
+                <div class="grid md:grid-cols-2 gap-4 text-sm sm:text-base">
+                    <div class="bg-emerald-50/80 border border-emerald-200 rounded-xl p-4">
+                        <div class="font-bold text-emerald-900 mb-2">✅ 正面影響（長治久安與文化高峰）</div>
+                        <ul class="space-y-1.5 text-emerald-800">
+                            <li>1. 徹底根除武人跋扈與地方割據，北宋三百餘年無藩鎮之亂。</li>
+                            <li>2. 社會流動性大增，寒門子弟可透過讀書改變命運。</li>
+                            <li>3. 推動教育、印刷術、理學、宋詞及科技（活字印刷、指南針、火藥）達致古代巔峰。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-rose-50/80 border border-rose-200 rounded-xl p-4">
+                        <div class="font-bold text-rose-900 mb-2">❌ 負面影響（行政低效與軍事積弱）</div>
+                        <ul class="space-y-1.5 text-rose-800">
+                            <li>1. <strong>官僚膨脹：</strong>科舉與恩蔭過濫，導致官員人數激增，人浮於事。</li>
+                            <li>2. <strong>黨爭不斷：</strong>士大夫政見不同，易演變成激烈派系鬥爭（如新舊黨爭）。</li>
+                            <li>3. <strong>外行領導內行：</strong>文官不懂軍事卻指揮作戰，削弱軍隊戰鬥力。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 宋代的改革背景（積貧積弱） -->
+        <section id="reform-bg" class="scroll-mt-20">
+            <div class="flex items-center space-x-3 mb-5">
+                <span class="w-8 h-8 rounded-lg bg-ochre text-white flex items-center justify-center font-serif font-bold">三</span>
+                <h3 class="font-serif text-2xl font-bold text-stone-800">北宋中葉的改革背景：「積貧」與「積弱」</h3>
+            </div>
+
+            <p class="text-sm sm:text-base text-stone-700 leading-relaxed mb-6">
+                至宋仁宗、宋神宗時期（11世紀中葉），宋初集權政策的弊端全面爆發，國家陷入嚴重的<strong>「積貧」</strong>（財政危機）與<strong>「積弱」</strong>（國防危機）困境，引發了<strong>范仲淹「慶曆新政」</strong>與<strong>王安石變法</strong>。
+            </p>
+
+            <!-- Interactive Cause-Effect Chain: 三冗與兩積 -->
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <!-- 積貧 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-amber-500 border-x border-b border-stone-200">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="font-serif text-xl font-bold text-amber-900">💸 一、「積貧」危機（財政入不敷出）</h4>
+                        <span class="text-xs bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded">關鍵詞：三冗</span>
+                    </div>
+                    <div class="space-y-3 text-sm text-stone-700">
+                        <div class="p-3 rounded-xl bg-amber-50/70">
+                            <strong class="text-amber-950">1. 冗官（官員過多）：</strong>
+                            分化事權、科舉大開及「恩蔭」制度，令官員數目激增，朝廷每年支付龐大俸祿。
+                        </div>
+                        <div class="p-3 rounded-xl bg-amber-50/70">
+                            <strong class="text-amber-950">2. 冗兵（軍隊龐大）：</strong>
+                            採用「募兵制」，每逢災荒便招募流民當兵（荒年募兵），禁軍與廂軍總數高達一百二十多萬，軍費佔國家財政支出七成以上。
+                        </div>
+                        <div class="p-3 rounded-xl bg-amber-50/70">
+                            <strong class="text-amber-950">3. 冗費（開支浩繁）：</strong>
+                            除官俸與軍費外，朝廷還要支付對遼、西夏的巨額<strong>「歲幣」</strong>，加上皇室奢華及祭祀賞賜，國庫日漸空虛。
+                        </div>
+                        <div class="p-3 rounded-xl bg-stone-100 text-stone-700">
+                            <strong class="text-stone-900">4. 土地兼併嚴重：</strong>
+                            官僚地主大量兼併農田並逃避賦稅，賦稅重擔全落在貧苦自耕農身上，農民起義頻生。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 積弱 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-vermilion border-x border-b border-stone-200">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="font-serif text-xl font-bold text-rose-900">🛡️ 二、「積弱」危機（軍力不振、外患頻仍）</h4>
+                        <span class="text-xs bg-rose-100 text-rose-800 font-bold px-2.5 py-1 rounded">關鍵詞：更戍法、歲幣</span>
+                    </div>
+                    <div class="space-y-3 text-sm text-stone-700">
+                        <div class="p-3 rounded-xl bg-rose-50/70">
+                            <strong class="text-rose-950">1. 兵將分離，戰力低下：</strong>
+                            推行<strong>「更戍法」</strong>，定期調動禁軍駐防地而將領不隨行，導致「兵不識將，將不識兵」，作戰時無法協調。
+                        </div>
+                        <div class="p-3 rounded-xl bg-rose-50/70">
+                            <strong class="text-rose-950">2. 守內虛外，邊防空虛：</strong>
+                            精銳禁軍半數駐守京師開封以防內亂，邊境防禦力量相對薄弱，且失去<strong>燕雲十六州</strong>天險，無險可守。
+                        </div>
+                        <div class="p-3 rounded-xl bg-rose-50/70">
+                            <strong class="text-rose-950">3. 募兵素質參差：</strong>
+                            軍隊吸納大量老弱流民，缺乏嚴格訓練，軍紀鬆散，戰鬥力遠遜於北方遊牧民族騎兵。
+                        </div>
+                        <div class="p-3 rounded-xl bg-stone-100 text-stone-700">
+                            <strong class="text-stone-900">4. 遼、西夏交迫（屈辱求和）：</strong>
+                            北宋對<strong>遼國</strong>（1004年訂「澶淵之盟」）及<strong>西夏</strong>作戰屢敗，被迫每年贈送大量銀兩、絹帛（「歲幣」）以換取和平。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Banner of Reform Background -->
+            <div class="bg-gradient-to-r from-stone-800 to-slate-800 text-white rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                    <div class="text-xs text-amber-300 font-bold uppercase tracking-wider mb-1">歷史轉折點</div>
+                    <h4 class="font-serif text-lg sm:text-xl font-bold">「不變法，則國將亡」</h4>
+                    <p class="text-xs sm:text-sm text-stone-300 mt-1 leading-relaxed">
+                        內有「三冗」與農民起義，外有遼、西夏威脅。宋仁宗時<strong>范仲淹</strong>推行「慶曆新政」（因觸動官僚既得利益，僅一年便失敗）；至宋神宗即位，遂任用<strong>王安石</strong>推行更全面的「熙寧變法」，圖謀富國強兵。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 中史長答題核心因果圖解 -->
+        <section id="exam-framework" class="scroll-mt-20">
+            <div class="flex items-center space-x-3 mb-5">
+                <span class="w-8 h-8 rounded-lg bg-celadon text-white flex items-center justify-center font-serif font-bold">四</span>
+                <h3 class="font-serif text-2xl font-bold text-stone-800">考試高頻因果邏輯鏈（長答題必背）</h3>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200">
+                <p class="text-sm text-stone-600 mb-4">考試常問：<strong>「試分析宋初中央集權政策如何導致北宋中葉的積貧積弱局面。」</strong>可按以下因果對應作答：</p>
+                <div class="space-y-3 text-sm sm:text-base">
+                    <div class="flex flex-col sm:flex-row sm:items-center bg-stone-50 p-3.5 rounded-xl border border-stone-200 gap-2">
+                        <span class="font-bold text-celadon sm:w-1/3">① 分化事權 + 擴充科舉/恩蔭</span>
+                        <span class="hidden sm:inline text-stone-400">➔</span>
+                        <span class="text-stone-800 sm:w-2/3">機構重疊、<strong>「冗官」</strong>問題嚴重 ➔ 官俸激增 ➔ <strong>積貧</strong></span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center bg-stone-50 p-3.5 rounded-xl border border-stone-200 gap-2">
+                        <span class="font-bold text-celadon sm:w-1/3">② 荒年募兵（只增不減）</span>
+                        <span class="hidden sm:inline text-stone-400">➔</span>
+                        <span class="text-stone-800 sm:w-2/3">軍隊人數膨脹成<strong>「冗兵」</strong> ➔ 軍費浩大 ➔ <strong>積貧</strong>；軍隊老弱 ➔ <strong>積弱</strong></span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center bg-stone-50 p-3.5 rounded-xl border border-stone-200 gap-2">
+                        <span class="font-bold text-celadon sm:w-1/3">③ 更戍法 + 重文抑武（文官統兵）</span>
+                        <span class="hidden sm:inline text-stone-400">➔</span>
+                        <span class="text-stone-800 sm:w-2/3">兵將分離、指揮不靈 ➔ 對遼、西夏戰敗 ➔ <strong>積弱</strong></span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center bg-stone-50 p-3.5 rounded-xl border border-stone-200 gap-2">
+                        <span class="font-bold text-celadon sm:w-1/3">④ 戰敗求和（支付遼、夏歲幣）</span>
+                        <span class="hidden sm:inline text-stone-400">➔</span>
+                        <span class="text-stone-800 sm:w-2/3">形成龐大<strong>「冗費」</strong> ➔ 財政進一步惡化 ➔ <strong>積貧</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: 互動自測練習 -->
+        <section id="quiz" class="scroll-mt-20">
+            <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-lg">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-teal-400 font-bold">Exam Practice</span>
+                        <h3 class="font-serif text-2xl font-bold mt-1">中史即時小測驗（共 5 題）</h3>
+                    </div>
+                    <div id="quiz-score-badge" class="bg-white/10 px-4 py-1.5 rounded-full text-sm font-bold text-teal-300">
+                        得分：0 / 5
+                    </div>
+                </div>
+
+                <div id="quiz-container" class="space-y-6">
+                    <!-- Populated via JS -->
+                </div>
+
+                <div class="mt-6 pt-5 border-t border-slate-700 flex flex-wrap items-center justify-between gap-4">
+                    <p class="text-xs sm:text-sm text-slate-400">點擊選項即可即時核對答案及查看解析。</p>
+                    <button onclick="resetQuiz()" class="px-5 py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm transition cursor-pointer">
+                        重新測驗
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-100 border-t border-stone-200 py-6 text-center text-xs sm:text-sm text-stone-500">
+        <p>香港初中中國歷史科溫習筆記 • 北宋建立、文人政治與改革背景</p>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Data for Song Centralization Policies
+        const policyData = [
+            {
+                title: "軍事集權：收精兵、削將權（核心中之核心）",
+                goal: "防止武將擁兵自重，重演五代兵變篡奪的歷史。",
+                measures: [
+                    {
+                        name: "杯酒釋兵權",
+                        desc: "宋太祖在酒宴上以高官厚祿及田宅為條件，勸說石守信等禁軍高級將領交出兵權，解除了武將對皇權的直接威脅。"
+                    },
+                    {
+                        name: "兵權三分（樞密院與三衙分權）",
+                        desc: "設「樞密院」掌調兵權（由文官出任長官），禁軍最高統帥機構「三衙」掌統兵權（訓練與管理），使「握兵者無發兵之權，發兵者無握兵之重」。"
+                    },
+                    {
+                        name: "推行更戍法",
+                        desc: "禁軍定期調換駐防地點，但統兵將領不隨軍調動，造成「兵無常帥，帥無常師」，防止將領培植私人勢力。"
+                    },
+                    {
+                        name: "強幹弱枝（編練禁軍）",
+                        desc: "挑選全國精銳士兵編入中央「禁軍」，半數駐守京師開封以鎮壓地方；地方軍隊（「廂軍」）僅負責雜役，戰鬥力極弱。"
+                    }
+                ]
+            },
+            {
+                title: "行政削相：分化事權、二府三司制",
+                goal: "削弱宰相權力，防止權臣專政，使皇權高度集中。",
+                measures: [
+                    {
+                        name: "相權一分為三",
+                        desc: "設立多名副宰相（「參知政事」）分割宰相行政權；「樞密使」掌軍政，「三司使」（戶部、度支、鹽鐵）掌財政，三者互不統屬，直接向皇帝負責。"
+                    },
+                    {
+                        name: "擴大臺諫監察權",
+                        desc: "賦予御史台與諫院獨立監察百官及規諫皇帝的權力，形成行政與監察互相牽制的格局。"
+                    }
+                ]
+            },
+            {
+                title: "地方控制：削奪藩鎮實權",
+                goal: "徹底瓦解唐末五代以來節度使集軍、政、財大權於一身的割據基礎。",
+                measures: [
+                    {
+                        name: "文臣任知州",
+                        desc: "罷免節度使實權，改派中央文官出任地方長官（「知州」），三年一任，防止地方勢力坐大。"
+                    },
+                    {
+                        name: "設「通判」牽制",
+                        desc: "在各州設置「通判」作為副長官，直接向朝廷負責，所有政令須經知州與通判共同簽署方能生效（史稱「監州」）。"
+                    }
+                ]
+            },
+            {
+                title: "財政集中：制錢穀（截斷地方叛亂經費）",
+                goal: "將地方財賦收歸中央，使地方失去叛亂的物質基礎。",
+                measures: [
+                    {
+                        name: "設置「轉運使」",
+                        desc: "在各路（相當於省）設「轉運使」，規定地方賦稅除保留極少數必要開支外，其餘全部運往京師開封，地方再無餘財養兵作亂。"
+                    }
+                ]
+            }
+        ];
+
+        function selectPolicy(index) {
+            const tabs = document.querySelectorAll('.policy-tab');
+            tabs.forEach((tab, i) => {
+                if (i === index) {
+                    tab.classList.add('border-celadon', 'text-celadon', 'bg-white');
+                    tab.classList.remove('border-transparent', 'text-stone-600');
+                } else {
+                    tab.classList.remove('border-celadon', 'text-celadon', 'bg-white');
+                    tab.classList.add('border-transparent', 'text-stone-600');
+                }
+            });
+
+            const p = policyData[index];
+            const container = document.getElementById('policy-detail');
+            container.innerHTML = `
+                <div class="mb-4 pb-3 border-b border-stone-100">
+                    <h4 class="font-serif text-lg sm:text-xl font-bold text-stone-900">${p.title}</h4>
+                    <p class="text-xs sm:text-sm text-celadon font-medium mt-1">🎯 政策目的：${p.goal}</p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-3.5">
+                    ${p.measures.map(m => `
+                        <div class="bg-stone-50 border border-stone-200/80 rounded-xl p-4">
+                            <div class="font-bold text-stone-900 text-sm sm:text-base mb-1 flex items-center">
+                                <span class="w-2 h-2 rounded-full bg-celadon mr-2"></span>
+                                ${m.name}
+                            </div>
+                            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">${m.desc}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        // Initialize first policy tab
+        selectPolicy(0);
+
+        // Quiz Questions
+        const quizQuestions = [
+            {
+                q: "1. 宋太祖採納宰相趙普的建議，制定了哪一項統一天下的戰略方針？",
+                options: [
+                    "A. 先北後南，先難後易",
+                    "B. 先南後北，先易後難",
+                    "C. 遠交近攻，各個擊破",
+                    "D. 聯遼滅夏，南北夾擊"
+                ],
+                answer: 1,
+                explanation: "正確答案是 B。北宋採取「先南後北，先易後難」方針，先統一物產豐饒但軍力較弱的南方諸國，最後才於979年攻滅北漢。"
+            },
+            {
+                q: "2. 宋初為防止地方長官（知州）專權，朝廷在各州設置了哪一個官職加以牽制？",
+                options: [
+                    "A. 節度使",
+                    "B. 樞密使",
+                    "C. 通判",
+                    "D. 參知政事"
+                ],
+                answer: 2,
+                explanation: "正確答案是 C。朝廷在各州設「通判」監督知州，地方公文須經知州與通判聯署才有效，人稱「監州」。"
+            },
+            {
+                q: "3. 宋初推行「更戍法」的主要目的是什麼？",
+                options: [
+                    "A. 讓士兵熟悉全國各地的地理環境",
+                    "B. 防止將領長期統率同一支軍隊而培植私人勢力",
+                    "C. 節省中央政府的軍費開支",
+                    "D. 加强邊境地區的常駐軍事力量"
+                ],
+                answer: 1,
+                explanation: "正確答案是 B。「更戍法」定期調動禁軍駐地而將領不隨行，使「兵無常帥，帥無常師」，雖防範了兵變，卻導致兵將不相習、戰力大減。"
+            },
+            {
+                q: "4. 下列哪一項不是宋代「文人政治」興盛的原因或表現？",
+                options: [
+                    "A. 大幅增加科舉錄取名額，並推行糊名、謄錄法",
+                    "B. 確立殿試制度，使進士成為「天子門生」",
+                    "C. 規定地方知州及樞密院必須由功勳卓著的武將出任",
+                    "D. 宋太祖立誓不殺士大夫及上書言事人"
+                ],
+                answer: 2,
+                explanation: "正確答案是 C（描述錯誤）。宋代推行「重文抑武」，樞密使與地方知州皆由文官出任，武將反而受到嚴格牽制。"
+            },
+            {
+                q: "5. 北宋中葉陷入「積貧」危機，主要是因為「三冗」問題嚴重。下列哪項不屬於「三冗」？",
+                options: [
+                    "A. 冗官",
+                    "B. 冗兵",
+                    "C. 冗費",
+                    "D. 冗役"
+                ],
+                answer: 3,
+                explanation: "正確答案是 D。「三冗」是指冗官（官員過多）、冗兵（軍隊龐大）與冗費（官俸、軍費及給遼夏的歲幣開支浩繁）。"
+            }
+        ];
+
+        let userAnswers = new Array(quizQuestions.length).fill(null);
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = quizQuestions.map((item, qIndex) => {
+                const answered = userAnswers[qIndex] !== null;
+                return `
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-5">
+                        <div class="font-bold text-base sm:text-lg text-slate-100 mb-3.5">${item.q}</div>
+                        <div class="grid sm:grid-cols-2 gap-2.5">
+                            ${item.options.map((opt, oIndex) => {
+                                let btnClass = "bg-slate-700/60 hover:bg-slate-700 border-slate-600 text-slate-200";
+                                if (answered) {
+                                    if (oIndex === item.answer) {
+                                        btnClass = "bg-emerald-600/30 border-emerald-400 text-emerald-200 font-bold";
+                                    } else if (oIndex === userAnswers[qIndex]) {
+                                        btnClass = "bg-rose-600/30 border-rose-400 text-rose-200";
+                                    } else {
+                                        btnClass = "bg-slate-800/40 border-slate-700 text-slate-500";
+                                    }
+                                }
+                                return `
+                                    <button 
+                                        onclick="handleAnswer(${qIndex}, ${oIndex})"
+                                        ${answered ? 'disabled' : ''}
+                                        class="text-left p-3 rounded-xl border text-sm transition cursor-pointer ${btnClass}">
+                                        ${opt}
+                                    </button>
+                                `;
+                            }).join('')}
+                        </div>
+                        ${answered ? `
+                            <div class="mt-3.5 p-3 rounded-xl text-xs sm:text-sm ${userAnswers[qIndex] === item.answer ? 'bg-emerald-950/60 text-emerald-300 border border-emerald-800' : 'bg-rose-950/60 text-rose-300 border border-rose-800'}">
+                                ${userAnswers[qIndex] === item.answer ? '✅ 答對了！' : '❌ 答錯了！'} ${item.explanation}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+
+            const score = userAnswers.reduce((acc, ans, idx) => acc + (ans === quizQuestions[idx].answer ? 1 : 0), 0);
+            document.getElementById('quiz-score-badge').textContent = `得分：${score} / ${quizQuestions.length}`;
+        }
+
+        function handleAnswer(qIndex, oIndex) {
+            if (userAnswers[qIndex] !== null) return;
+            userAnswers[qIndex] = oIndex;
+            renderQuiz();
+        }
+
+        function resetQuiz() {
+            userAnswers = new Array(quizQuestions.length).fill(null);
+            renderQuiz();
+        }
+
+        // Initial render
+        renderQuiz();
+    </script>
+</body>
+</html>
