@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中二中史精讀：北宋的變法（慶曆新政與王安石變法）</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Noto Serif TC"', 'serif'],
+                    },
+                    colors: {
+                        paper: '#F8F7F4',
+                        ink: '#272523',
+                        celadon: '#2F6F65',
+                        vermilion: '#C83E37',
+                        ochre: '#B47B2B',
+                        indigoink: '#2C3E50',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-vermilion selection:text-white">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center space-x-2">
+                <span class="bg-vermilion text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wider">中二中史</span>
+                <h1 class="font-serif text-lg sm:text-xl font-bold text-stone-800">北宋的變法：慶曆新政與王安石變法</h1>
+            </div>
+            <nav class="flex space-x-1 sm:space-x-2 text-xs sm:text-sm font-medium overflow-x-auto py-1">
+                <a href="#qingli" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">慶曆新政</a>
+                <a href="#wang-measures" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">熙寧變法內容</a>
+                <a href="#failure" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">失敗原因</a>
+                <a href="#impact" class="px-3 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 transition">歷史影響</a>
+                <a href="#quiz" class="px-3 py-1.5 rounded-lg bg-vermilion/10 text-vermilion hover:bg-vermilion hover:text-white transition font-bold">小測驗</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="bg-gradient-to-br from-stone-900 via-red-950 to-stone-900 text-white py-10 sm:py-14 px-4 sm:px-6 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="inline-block border border-amber-400/40 text-amber-300 text-xs sm:text-sm px-3 py-1 rounded-full mb-3">
+                香港初中中國歷史科 • 宋元時期專題（二）
+            </div>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight mb-4 leading-tight">
+                力挽狂瀾的改革：<span class="text-amber-400">王安石變法</span>
+            </h2>
+            <p class="text-stone-300 text-sm sm:text-base max-w-2xl leading-relaxed mb-6">
+                面對北宋中葉「三冗」與「積貧積弱」的深重危機，范仲淹率先發動「慶曆新政」整頓吏治；其後宋神宗起用王安石推行「熙寧變法」，全面推動富國（經濟理財）、強兵（軍事改革）及育才（教育科舉）三大範疇。本筆記全面整合各項改革措施與考點！
+            </p>
+            <!-- Key Concept Pills -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl">
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-amber-200/80">變法先聲（1043年）</div>
+                    <div class="font-bold text-base sm:text-lg text-white">范仲淹 • 慶曆新政</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-amber-200/80">全面變法（1069年）</div>
+                    <div class="font-bold text-base sm:text-lg text-amber-300">宋神宗 • 王安石</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-amber-200/80">核心範疇</div>
+                    <div class="font-bold text-base sm:text-lg text-white">富國 • 強兵 • 育才</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3">
+                    <div class="text-xs text-amber-200/80">最大政爭</div>
+                    <div class="font-bold text-base sm:text-lg text-rose-300">新舊黨爭（司馬光）</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12">
+
+        <!-- Section 1: 變法先聲——慶曆新政 -->
+        <section id="qingli" class="scroll-mt-20">
+            <div class="flex items-center space-x-3 mb-5">
+                <span class="w-8 h-8 rounded-lg bg-ochre text-white flex items-center justify-center font-serif font-bold">一</span>
+                <h3 class="font-serif text-2xl font-bold text-stone-800">變法先聲：范仲淹「慶曆新政」（1043年）</h3>
+            </div>
+
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200">
+                <div class="grid md:grid-cols-3 gap-5 text-sm sm:text-base">
+                    <div class="bg-amber-50/70 p-4 rounded-xl border border-amber-200/80">
+                        <div class="font-bold text-amber-950 mb-1.5">1. 背景與主持者</div>
+                        <p class="text-stone-700 leading-relaxed">
+                            宋仁宗慶曆三年（1043年），北宋對西夏連年戰敗，財政困窘。仁宗任用副宰相<strong>范仲淹</strong>主持改革，范仲淹上《答手詔條陳十事》，以<strong>「整頓吏治」</strong>為核心。
+                        </p>
+                    </div>
+                    <div class="bg-amber-50/70 p-4 rounded-xl border border-amber-200/80">
+                        <div class="font-bold text-amber-950 mb-1.5">2. 主要改革內容</div>
+                        <ul class="space-y-1 text-stone-700 leading-relaxed">
+                            <li>• <strong>明黜陟：</strong>嚴格考核官員政績，罷免庸官。</li>
+                            <li>• <strong>抑僥倖：</strong>限制「恩蔭」特權，減少冗官。</li>
+                            <li>• <strong>精貢舉：</strong>改革科舉，重策論而輕詩賦。</li>
+                            <li>• <strong>厚農桑、減徭役：</strong>減輕農民負擔。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-rose-50/70 p-4 rounded-xl border border-rose-200/80">
+                        <div class="font-bold text-rose-950 mb-1.5">3. 結果與意義</div>
+                        <p class="text-stone-700 leading-relaxed">
+                            新政直接觸動大地主與大官僚的既得利益，遭到權貴激烈反對與誣陷，宋仁宗動搖，新政推行<strong>僅一年多便告失敗</strong>。但它揭開了北宋中葉改革運動的序幕。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 王安石變法（熙寧變法）核心內容 -->
+        <section id="wang-measures" class="scroll-mt-20">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-lg bg-vermilion text-white flex items-center justify-center font-serif font-bold">二</span>
+                    <h3 class="font-serif text-2xl font-bold text-stone-800">王安石「熙寧變法」三大範疇詳解（1069年起）</h3>
+                </div>
+                <span class="text-xs font-medium bg-stone-200 text-stone-800 px-3 py-1 rounded-full">
+                    名言：「天變不足畏，祖宗不足法，人言不足恤」
+                </span>
+            </div>
+
+            <p class="text-sm sm:text-base text-stone-700 leading-relaxed mb-5">
+                公元1069年，<strong>宋神宗</strong>起用<strong>王安石</strong>為參知政事，全面推行<strong>富國（理財）</strong>、<strong>強兵（軍事）</strong>及<strong>育才（教育科舉）</strong>三大範疇的改革：
+            </p>
+
+            <!-- Interactive Category Tabs -->
+            <div class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+                <div class="grid grid-cols-3 border-b border-stone-200 bg-stone-50 text-center" id="reform-tabs">
+                    <button onclick="selectReformTab(0)" class="reform-tab py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-vermilion text-vermilion bg-white transition cursor-pointer">
+                        💰 一、富國之法（理財）
+                    </button>
+                    <button onclick="selectReformTab(1)" class="reform-tab py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-transparent text-stone-600 hover:text-stone-900 transition cursor-pointer">
+                        ⚔️ 二、強兵之法（軍事）
+                    </button>
+                    <button onclick="selectReformTab(2)" class="reform-tab py-3.5 px-2 font-bold text-sm sm:text-base border-b-2 border-transparent text-stone-600 hover:text-stone-900 transition cursor-pointer">
+                        📚 三、育才之法（教育）
+                    </button>
+                </div>
+
+                <!-- Dynamic Content Area -->
+                <div id="reform-detail" class="p-6 sm:p-7">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 王安石變法失敗的原因（長答題核心） -->
+        <section id="failure" class="scroll-mt-20">
+            <div class="flex items-center space-x-3 mb-5">
+                <span class="w-8 h-8 rounded-lg bg-indigoink text-white flex items-center justify-center font-serif font-bold">三</span>
+                <h3 class="font-serif text-2xl font-bold text-stone-800">王安石變法失敗的原因（考試必考長答題）</h3>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Reason 1 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200">
+                    <div class="flex items-center space-x-2 mb-2.5">
+                        <span class="w-7 h-7 rounded-full bg-vermilion/10 text-vermilion font-bold flex items-center justify-center text-sm">1</span>
+                        <h4 class="font-bold text-base text-stone-900">觸動權貴利益，保守派反對</h4>
+                    </div>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        募役法、方田均稅法及市易法等直接損害大地主、大官僚與大商人的特權，引起以<strong>司馬光、歐陽修、蘇軾</strong>為首的保守派（舊黨）強烈反對，朝廷內部阻力極大。
+                    </p>
+                </div>
+
+                <!-- Reason 2 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200">
+                    <div class="flex items-center space-x-2 mb-2.5">
+                        <span class="w-7 h-7 rounded-full bg-vermilion/10 text-vermilion font-bold flex items-center justify-center text-sm">2</span>
+                        <h4 class="font-bold text-base text-stone-900">操之過急，用人失當</h4>
+                    </div>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        王安石求功心切，短期內同時頒布多項新法；又因保守派大臣拒絕合作，王安石被迫起用<strong>呂惠卿、章惇</strong>等投機分子，導致新法在執行時變質。
+                    </p>
+                </div>
+
+                <!-- Reason 3 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200">
+                    <div class="flex items-center space-x-2 mb-2.5">
+                        <span class="w-7 h-7 rounded-full bg-vermilion/10 text-vermilion font-bold flex items-center justify-center text-sm">3</span>
+                        <h4 class="font-bold text-base text-stone-900">地方官吏執行不善，擾民害民</h4>
+                    </div>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        部分地方官為求政績或貪污，強迫農民借貸青苗錢並收取高息（強制攤派），免役錢負擔亦甚沉重，使原本利民的新法變成「擾民之政」，失去百姓支持。
+                    </p>
+                </div>
+
+                <!-- Reason 4 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200">
+                    <div class="flex items-center space-x-2 mb-2.5">
+                        <span class="w-7 h-7 rounded-full bg-vermilion/10 text-vermilion font-bold flex items-center justify-center text-sm">4</span>
+                        <h4 class="font-bold text-base text-stone-900">宋神宗動搖與早逝</h4>
+                    </div>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        變法完全依賴宋神宗支持。1074年華北發生大旱，鄭俠繪《流民圖》進諫，太后亦哭訴「安石亂天下」，神宗動搖並兩度罷免王安石；1085年神宗病逝，新法失去靠山。
+                    </p>
+                </div>
+
+                <!-- Reason 5 -->
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-stone-200 sm:col-span-2 lg:col-span-2">
+                    <div class="flex items-center space-x-2 mb-2.5">
+                        <span class="w-7 h-7 rounded-full bg-vermilion/10 text-vermilion font-bold flex items-center justify-center text-sm">5</span>
+                        <h4 class="font-bold text-base text-stone-900">宣仁太后臨朝，司馬光盡廢新法</h4>
+                    </div>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        宋神宗病逝後，年幼的宋哲宗即位，由反對變法的<strong>高太后（宣仁太后）</strong>垂簾聽政，起用保守派領袖<strong>司馬光</strong>為宰相，在一年內將王安石所行新法不論利弊全部廢除（史稱「元祐更化」），熙寧變法宣告徹底失敗。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 變法的歷史影響與評價 -->
+        <section id="impact" class="scroll-mt-20">
+            <div class="flex items-center space-x-3 mb-5">
+                <span class="w-8 h-8 rounded-lg bg-celadon text-white flex items-center justify-center font-serif font-bold">四</span>
+                <h3 class="font-serif text-2xl font-bold text-stone-800">王安石變法的影響與歷史評價</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-emerald-50/80 border border-emerald-200 rounded-2xl p-6">
+                    <h4 class="font-bold text-lg text-emerald-950 mb-3">✅ 積極成效（富國強兵初見成效）</h4>
+                    <ul class="space-y-2.5 text-sm sm:text-base text-emerald-900 leading-relaxed">
+                        <li>• <strong>財政轉虧為盈：</strong>農田水利法興修水利一萬多處，國庫儲蓄大幅增加，一度扭轉北宋「積貧」局面。</li>
+                        <li>• <strong>軍力有所提升：</strong>保甲法與將兵法增強了軍隊訓練與戰鬥力，北宋曾對西夏作戰取得勝利（「熙河開邊」收復失地）。</li>
+                        <li>• <strong>打破墨守成規風氣：</strong>王安石勇於革新的精神，在中國古代改革史上具有重要地位。</li>
+                    </ul>
+                </div>
+
+                <div class="bg-rose-50/80 border border-rose-200 rounded-2xl p-6">
+                    <h4 class="font-bold text-lg text-rose-950 mb-3">❌ 消極影響（新舊黨爭與北宋衰亡）</h4>
+                    <ul class="space-y-2.5 text-sm sm:text-base text-rose-900 leading-relaxed">
+                        <li>• <strong>引發「新舊黨爭」：</strong>新黨（支持變法）與舊黨（反對變法）由政見之爭演變為意氣之爭，互相排斥打擊，朝政日趨腐敗。</li>
+                        <li>• <strong>奸臣專權，加速北宋滅亡：</strong>宋徽宗時，蔡京打著「恢復新法」的旗號排斥異己、搜刮民財，激起方臘、宋江等民變；最終招致金兵南下，1127年發生「靖康之變」，北宋滅亡。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: 互動自測練習 -->
+        <section id="quiz" class="scroll-mt-20">
+            <div class="bg-stone-900 text-white rounded-3xl p-6 sm:p-8 shadow-lg">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-6">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-amber-400 font-bold">Exam Practice</span>
+                        <h3 class="font-serif text-2xl font-bold mt-1">中史即時小測驗（共 5 題）</h3>
+                    </div>
+                    <div id="quiz-score-badge" class="bg-white/10 px-4 py-1.5 rounded-full text-sm font-bold text-amber-300">
+                        得分：0 / 5
+                    </div>
+                </div>
+
+                <div id="quiz-container" class="space-y-6">
+                    <!-- Populated via JS -->
+                </div>
+
+                <div class="mt-6 pt-5 border-t border-stone-700 flex flex-wrap items-center justify-between gap-4">
+                    <p class="text-xs sm:text-sm text-stone-400">點擊選項即可即時核對答案及查看解析。</p>
+                    <button onclick="resetQuiz()" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-sm transition cursor-pointer">
+                        重新測驗
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-100 border-t border-stone-200 py-6 text-center text-xs sm:text-sm text-stone-500">
+        <p>香港初中中國歷史科溫習筆記 • 北宋的變法專題</p>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        const reformCategories = [
+            {
+                title: "一、富國之法（增加政府收入，抑制豪強兼併，解決「積貧」）",
+                items: [
+                    {
+                        name: "1. 青苗法",
+                        content: "每年春夏青黃不接時，政府貸款或借糧給農民，秋收後連同低息（二分）歸還。",
+                        purpose: "防止農民受高利貸盤剝，同時增加政府財政收入。（註：執行時常變成強迫攤派）"
+                    },
+                    {
+                        name: "2. 募役法（免役法）",
+                        content: "廢除原本按戶等輪流服差役的制度，改由政府向所有民戶（包括原本享有免役特權的官僚地主）徵收「免役錢」，再由官府出錢僱人服役。",
+                        purpose: "既不耽誤農民農時，又打破官僚地主免役特權，增加國庫收入。"
+                    },
+                    {
+                        name: "3. 方田均稅法",
+                        content: "重新丈量全國土地，按土地肥瘠分為五等徵稅，清查隱瞞田產。",
+                        purpose: "打擊大地主隱田逃稅，使賦稅負擔趨向公平。"
+                    },
+                    {
+                        name: "4. 農田水利法",
+                        content: "鼓勵各地興修水利工程、開墾荒地，由政府提供貸款補助。",
+                        purpose: "促進農業生產，增加糧食產量。"
+                    },
+                    {
+                        name: "5. 市易法與均輸法",
+                        content: "在京師設「市易務」，平價收購滯銷貨物並於物價高漲時出售；「均輸法」則按「徙貴就賤，用近易遠」原則採購皇室物資。",
+                        purpose: "抑制大商人囤積居奇與操縱物價，為國家增加商業利潤。"
+                    }
+                ]
+            },
+            {
+                title: "二、強兵之法（整頓軍制，提升戰鬥力，解決「積弱」）",
+                items: [
+                    {
+                        name: "1. 保甲法",
+                        content: "將農村居民以十戶為一保編組，農閒時進行軍事訓練，戰時編入軍隊作戰，平時負責維護地方治安。",
+                        purpose: "既能加強地方治安與軍隊後備力量，又能逐步減少龐大的募兵開支（「冗兵」）。"
+                    },
+                    {
+                        name: "2. 保馬法",
+                        content: "鼓勵農戶自願代養官馬，政府減免其部分賦稅，戰時由官府徵用。",
+                        purpose: "節省朝廷養馬的巨額開支，並提高戰馬的存活率與素質。"
+                    },
+                    {
+                        name: "3. 將兵法",
+                        content: "廢除宋初「更戍法」中兵將分離的做法，在各路設置固定將領（「將官」）專門訓練與統率當地軍隊。",
+                        purpose: "扭轉「兵不識將，將不識兵」的弊端，大幅提升宋軍的作戰協調與戰鬥力。"
+                    },
+                    {
+                        name: "4. 設軍器監",
+                        content: "專責監督兵器製造，嚴格檢驗質量，改進弓弩與火器。",
+                        purpose: "改善宋軍武器裝備素質。"
+                    }
+                ]
+            },
+            {
+                title: "三、育才之法（改革科舉與太學，培養變法實用人才）",
+                items: [
+                    {
+                        name: "1. 改革科舉制度",
+                        content: "廢除死記硬背的「明經科」，進士科取消詩賦，改試經義（儒家經典大義）與時務策論。",
+                        purpose: "選拔具備實際行政與解決問題能力的人才，而非只懂吟詩作對的書生。"
+                    },
+                    {
+                        name: "2. 整頓太學（三舍法）",
+                        content: "將太學分為外舍、內舍、上舍三等，按學業成績逐級升遷；上舍生品學兼優者可直接授官，無需再經科舉。",
+                        purpose: "使學校教育與選官制度結合，並統一思想，為新法培養支持者。"
+                    }
+                ]
+            }
+        ];
+
+        function selectReformTab(index) {
+            const tabs = document.querySelectorAll('.reform-tab');
+            tabs.forEach((tab, i) => {
+                if (i === index) {
+                    tab.classList.add('border-vermilion', 'text-vermilion', 'bg-white');
+                    tab.classList.remove('border-transparent', 'text-stone-600');
+                } else {
+                    tab.classList.remove('border-vermilion', 'text-vermilion', 'bg-white');
+                    tab.classList.add('border-transparent', 'text-stone-600');
+                }
+            });
+
+            const cat = reformCategories[index];
+            const container = document.getElementById('reform-detail');
+            container.innerHTML = `
+                <h4 class="font-serif text-lg sm:text-xl font-bold text-stone-900 mb-4 pb-3 border-b border-stone-100">${cat.title}</h4>
+                <div class="space-y-3.5">
+                    ${cat.items.map(item => `
+                        <div class="bg-stone-50 border border-stone-200/80 rounded-xl p-4">
+                            <div class="font-bold text-vermilion text-base mb-1">${item.name}</div>
+                            <p class="text-sm text-stone-800 leading-relaxed mb-1.5"><strong>內容：</strong>${item.content}</p>
+                            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed"><strong>目的與影響：</strong>${item.purpose}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        // Initialize first tab
+        selectReformTab(0);
+
+        // Quiz Questions
+        const quizQuestions = [
+            {
+                q: "1. 宋仁宗慶曆三年（1043年），哪一位大臣主持「慶曆新政」，以整頓吏治為改革核心？",
+                options: [
+                    "A. 王安石",
+                    "B. 司馬光",
+                    "C. 范仲淹",
+                    "D. 趙普"
+                ],
+                answer: 2,
+                explanation: "正確答案是 C。范仲淹於1043年推行「慶曆新政」，因觸動官僚既得利益，推行僅一年多便失敗，但揭開了北宋改革序幕。"
+            },
+            {
+                q: "2. 王安石變法中，哪一項措施規定官僚地主也必須繳納「免役錢」，從而打破其免役特權並增加國庫收入？",
+                options: [
+                    "A. 青苗法",
+                    "B. 募役法",
+                    "C. 保甲法",
+                    "D. 市易法"
+                ],
+                answer: 1,
+                explanation: "正確答案是 B。募役法（免役法）向所有民戶（包括原本免役的官僚地主）徵收免役錢，由官府出錢僱人服役。"
+            },
+            {
+                q: "3. 為扭轉宋初「更戍法」造成的「兵不識將，將不識兵」弊端，王安石推行了哪一項軍事改革？",
+                options: [
+                    "A. 保馬法",
+                    "B. 將兵法",
+                    "C. 均輸法",
+                    "D. 三舍法"
+                ],
+                answer: 1,
+                explanation: "正確答案是 B。「將兵法」在各路設置固定將官專責訓練與統率當地軍隊，使兵將相習，提升了宋軍戰鬥力。"
+            },
+            {
+                q: "4. 下列哪一項不屬於王安石變法失敗的原因？",
+                options: [
+                    "A. 觸動大地主與大官僚利益，遭保守派強烈反對",
+                    "B. 地方官吏執行不善，強迫農民借貸青苗錢導致擾民",
+                    "C. 宋神宗病逝後，高太后起用司馬光盡廢新法",
+                    "D. 王安石在變法期間發動兵變企圖篡奪皇位"
+                ],
+                answer: 3,
+                explanation: "正確答案是 D（描述完全虛構）。王安石變法失敗的主因包括保守派反對、用人失當與地方執行擾民，以及神宗病逝後司馬光盡廢新法。"
+            },
+            {
+                q: "5. 王安石變法後，北宋政壇陷入長期派系傾軋，這場政爭史稱為什麼？",
+                options: [
+                    "A. 牛李黨爭",
+                    "B. 新舊黨爭",
+                    "C. 東林黨爭",
+                    "D. 靖康之變"
+                ],
+                answer: 1,
+                explanation: "正確答案是 B。支持變法的新黨（王安石等）與反對變法的舊黨（司馬光等）互相排斥打擊，史稱「新舊黨爭」，嚴重削弱了北宋國力。"
+            }
+        ];
+
+        let userAnswers = new Array(quizQuestions.length).fill(null);
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = quizQuestions.map((item, qIndex) => {
+                const answered = userAnswers[qIndex] !== null;
+                return `
+                    <div class="bg-stone-800/80 border border-stone-700 rounded-2xl p-5">
+                        <div class="font-bold text-base sm:text-lg text-stone-100 mb-3.5">${item.q}</div>
+                        <div class="grid sm:grid-cols-2 gap-2.5">
+                            ${item.options.map((opt, oIndex) => {
+                                let btnClass = "bg-stone-700/60 hover:bg-stone-700 border-stone-600 text-stone-200";
+                                if (answered) {
+                                    if (oIndex === item.answer) {
+                                        btnClass = "bg-emerald-600/30 border-emerald-400 text-emerald-200 font-bold";
+                                    } else if (oIndex === userAnswers[qIndex]) {
+                                        btnClass = "bg-rose-600/30 border-rose-400 text-rose-200";
+                                    } else {
+                                        btnClass = "bg-stone-800/40 border-stone-700 text-stone-500";
+                                    }
+                                }
+                                return `
+                                    <button 
+                                        onclick="handleAnswer(${qIndex}, ${oIndex})"
+                                        ${answered ? 'disabled' : ''}
+                                        class="text-left p-3 rounded-xl border text-sm transition cursor-pointer ${btnClass}">
+                                        ${opt}
+                                    </button>
+                                `;
+                            }).join('')}
+                        </div>
+                        ${answered ? `
+                            <div class="mt-3.5 p-3 rounded-xl text-xs sm:text-sm ${userAnswers[qIndex] === item.answer ? 'bg-emerald-950/60 text-emerald-300 border border-emerald-800' : 'bg-rose-950/60 text-rose-300 border border-rose-800'}">
+                                ${userAnswers[qIndex] === item.answer ? '✅ 答對了！' : '❌ 答錯了！'} ${item.explanation}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+
+            const score = userAnswers.reduce((acc, ans, idx) => acc + (ans === quizQuestions[idx].answer ? 1 : 0), 0);
+            document.getElementById('quiz-score-badge').textContent = `得分：${score} / ${quizQuestions.length}`;
+        }
+
+        function handleAnswer(qIndex, oIndex) {
+            if (userAnswers[qIndex] !== null) return;
+            userAnswers[qIndex] = oIndex;
+            renderQuiz();
+        }
+
+        function resetQuiz() {
+            userAnswers = new Array(quizQuestions.length).fill(null);
+            renderQuiz();
+        }
+
+        renderQuiz();
+    </script>
+</body>
+</html>
